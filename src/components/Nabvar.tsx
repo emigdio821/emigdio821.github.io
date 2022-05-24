@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { BiCoffee, BiCodeAlt } from "react-icons/bi";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
 import { Box, Flex, Button, useColorModeValue, Link } from "@chakra-ui/react";
@@ -23,18 +24,20 @@ export const Navbar = () => {
         >
           <Box>
             <Flex alignItems={"center"}>
-              <Button
-                variant="link"
-                colorScheme={useColorModeValue("inherit", "WhiteAlpha.900")}
-                leftIcon={<BiCoffee />}
-                size="lg"
-                _hover={{
-                  transform: "translateY(-1px)",
-                  background: "transparent",
-                }}
-              >
-                Emigdio<b>Torres</b>
-              </Button>
+              <NavLink to="/">
+                <Button
+                  variant="link"
+                  colorScheme={useColorModeValue("inherit", "WhiteAlpha.900")}
+                  leftIcon={<BiCoffee />}
+                  size="lg"
+                  _hover={{
+                    transform: "translateY(-1px)",
+                    background: "transparent",
+                  }}
+                >
+                  Emigdio<b>Torres</b>
+                </Button>
+              </NavLink>
             </Flex>
           </Box>
           <Flex alignItems={"center"}>
