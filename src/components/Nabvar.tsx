@@ -51,6 +51,14 @@ export const Navbar = () => {
             >
               Source
             </Button>
+            <NavLink to="/resume">
+              <Button
+                marginLeft="2"
+                variant="solid"
+              >
+                Resume
+              </Button>
+            </NavLink>
             <ColorModeSwitcher />
           </Flex>
         </Flex>
