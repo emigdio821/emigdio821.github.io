@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import { BiCoffee, BiCodeAlt } from "react-icons/bi";
+import { BiCoffee } from "react-icons/bi";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
-import { Box, Flex, Button, useColorModeValue, Link } from "@chakra-ui/react";
+import { Box, Flex, Button, useColorModeValue } from "@chakra-ui/react";
 
 export const Navbar = () => {
   return (
@@ -41,21 +41,8 @@ export const Navbar = () => {
             </Flex>
           </Box>
           <Flex alignItems={"center"}>
-            <Button
-              as={Link}
-              variant="link"
-              href="https://github.com/emigdio821/emigdio821.github.io"
-              isExternal
-              size={"sm"}
-              leftIcon={<BiCodeAlt />}
-            >
-              Source
-            </Button>
             <NavLink to="/resume">
-              <Button
-                marginLeft="2"
-                variant="solid"
-              >
+              <Button marginLeft="2" variant="solid">
                 Resume
               </Button>
             </NavLink>
