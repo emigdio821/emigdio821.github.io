@@ -33,14 +33,14 @@ const components = {
 //   heading: "'M PLUS Rounded 1c'",
 // };
 
-// const colors = {
-//   grassTeal: "#88ccca",
-// };
+const colors = {
+  grassTeal: "#88ccca",
+};
 
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: true,
 };
 
-const theme = extendTheme({ config, styles, components });
+const theme = extendTheme({ config, styles, components, colors });
 export default theme;

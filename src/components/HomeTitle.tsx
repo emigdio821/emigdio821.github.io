@@ -19,11 +19,7 @@ export const HomeTitle = () => {
             <p>Software Engineer</p>
           </Box>
         </Box>
-        <Avatar
-          src={ProfileImg}
-          name="Emigdio Torres"
-          size={{ base: "2xl", md: "xl" }}
-        />
+        <Avatar src={ProfileImg} name="Emigdio Torres" size="2xl" />
       </Stack>
     </>
   );

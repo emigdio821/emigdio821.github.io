@@ -4,6 +4,7 @@ import { HomeTitle } from "../components/HomeTitle"
 import { MotionDiv } from "../components/MotionDiv"
 import { Profile } from "../components/Profile"
 import { Skills } from "../components/Skills"
+import { SocialLinks } from '../components/SocialLinks';
 
 export const Home = () => {
   return (
@@ -19,6 +20,9 @@ export const Home = () => {
         <Skills />
       </MotionDiv>
       <MotionDiv delay={0.4}>
+        <SocialLinks />
+      </MotionDiv>
+      <MotionDiv delay={0.5}>
         <Hobbies />
       </MotionDiv>
     </>

@@ -10,7 +10,7 @@ export const App = () => {
     <BrowserRouter>
       <ChakraProvider theme={theme}>
         <Navbar />
-        <Container py={4} px={{ base: 4, md: 0 }} pt={20} >
+        <Container py={4} px={{ base: 4, md: 0 }} pt={20}>
           <AppdRoutes />
         </Container>
         <Footer />
