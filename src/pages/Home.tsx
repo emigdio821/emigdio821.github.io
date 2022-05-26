@@ -1,5 +1,11 @@
+import { HomeBody } from "../components/HomeBody"
+import { BodyTitle } from "../components/HomeTitle"
+
 export const Home = () => {
   return (
-    <div>Home Page</div>
+    <>
+      <BodyTitle />
+      <HomeBody />
+    </>
   )
 }
