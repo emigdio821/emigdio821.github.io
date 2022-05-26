@@ -8,9 +8,9 @@ import {
 import { BiMoon, BiSun } from "react-icons/bi";
 import { AnimatePresence, motion } from "framer-motion";
 
-type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">;
+type ThemeSwitcherProps = Omit<IconButtonProps, "aria-label">;
 
-export const ColorModeSwitcher: React.FC<ColorModeSwitcherProps> = (props) => {
+export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = (props) => {
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(BiMoon, BiSun);

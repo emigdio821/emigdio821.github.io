@@ -21,7 +21,7 @@ export const Footer = () => {
     </Button>
   );
   return (
-    <Container as="footer" role="contentinfo">
+    <Container as="footer" role="contentinfo" px={0}>
       <Stack
         pt="2"
         pb="4"

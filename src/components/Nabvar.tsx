@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { BiCoffee } from "react-icons/bi";
-import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 import { Box, Flex, Button, useColorModeValue } from "@chakra-ui/react";
 
 export const Navbar = () => {
@@ -8,32 +8,32 @@ export const Navbar = () => {
     <>
       <Box
         px={4}
-        position="fixed"
         as="nav"
         w="100%"
-        bg={useColorModeValue("#ffffff40", "#20202380")}
-        css={{ backdropFilter: "blur(10px)" }}
         zIndex={1}
+        position="fixed"
+        css={{ backdropFilter: "blur(10px)" }}
+        bg={useColorModeValue("#ffffff40", "#20202380")}
       >
         <Flex
           h={16}
+          maxW="4xl"
+          m={[0, "auto"]}
           alignItems={"center"}
           justifyContent={"space-between"}
-          maxW="8xl"
-          m={[0, "auto"]}
         >
           <Box>
             <Flex alignItems={"center"}>
               <NavLink to="/">
                 <Button
-                  variant="link"
-                  colorScheme={useColorModeValue("inherit", "WhiteAlpha.900")}
-                  leftIcon={<BiCoffee />}
                   size="lg"
+                  variant="link"
+                  leftIcon={<BiCoffee />}
                   _hover={{
                     transform: "translateY(-1px)",
                     background: "transparent",
                   }}
+                  colorScheme={useColorModeValue("inherit", "WhiteAlpha.900")}
                 >
                   Emigdio<b>Torres</b>
                 </Button>
@@ -46,7 +46,7 @@ export const Navbar = () => {
                 Resume
               </Button>
             </NavLink>
-            <ColorModeSwitcher />
+            <ThemeSwitcher />
           </Flex>
         </Flex>
       </Box>

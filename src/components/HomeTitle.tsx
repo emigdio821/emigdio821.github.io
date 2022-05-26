@@ -2,7 +2,7 @@
 import { Avatar, Box, Heading, Stack } from "@chakra-ui/react";
 import ProfileImg from "../assets/images/_doge.png";
 
-export const BodyTitle = () => {
+export const HomeTitle = () => {
   return (
     <>
       <Stack
