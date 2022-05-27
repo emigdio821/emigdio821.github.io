@@ -1,15 +1,12 @@
 import { AnimatePresence } from "framer-motion";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { routes } from "../routes/routes";
-import { MotionDiv } from "./MotionDiv";
 
 if (typeof window !== "undefined") {
   window.history.scrollRestoration = "manual";
 }
 
 export const AppdRoutes = () => {
-  const location = useLocation();
-
   return (
     <>
       <AnimatePresence
@@ -21,15 +18,13 @@ export const AppdRoutes = () => {
           }
         }}
       >
-        <Routes location={location} key={location.pathname}>
+        <Routes>
           {routes.map(({ Component, path }) => (
             <Route
               key={`${path}-route`}
               path={path}
               element={
-                <MotionDiv>
-                  <Component />
-                </MotionDiv>
+                <Component />
               }
             />
           ))}
