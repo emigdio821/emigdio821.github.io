@@ -1,5 +1,5 @@
-import "../assets/css/styles.css";
-import ProfileImg from "../assets/images/_doge.png";
+import "./styles.css";
+import ProfileImg from "../../assets/images/_doge.png";
 import { Button, Container, useColorModeValue } from "@chakra-ui/react";
 import {
   FaCss3Alt,
@@ -21,14 +21,21 @@ import {
   FaGithubAlt,
   FaLinkedinIn,
 } from "react-icons/fa";
-import { MotionDiv } from "../components/MotionDiv";
+import { MotionDiv } from "../../components/MotionDiv";
+import { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 export const Resume = () => {
+  const pdfRef = useRef(null);
+  const handlePdfDownload = useReactToPrint({
+    content: () => pdfRef.current,
+    documentTitle: "Emigdio-Torres",
+  })
   return (
     <>
       <Container py={4} px={{ base: 4, md: 0 }} pt={20} maxW="4xl">
         <MotionDiv delay={0.1}>
-          <main className="l-main bd-container">
+          <main className="l-main bd-container" ref={pdfRef}>
             <div className="resume" id="area-cv">
               <div
                 className="resume__left"
@@ -45,17 +52,18 @@ export const Resume = () => {
                         EMIGDIO <b>TORRES</b>
                       </h1>
                       <h3 className="home__profession">Software Engineer</h3>
-                      <div>
-                        <Button
-                          as="a"
-                          download=""
-                          leftIcon={<FaFilePdf />}
-                          href="assets/pdf/emigdio-resume.pdf"
-                        >
-                          Download
-                        </Button>
-                      </div>
                     </div>
+                    <Button
+                      as="a"
+                      download=""
+                      mb={2}
+                      leftIcon={<FaFilePdf />}
+                      className="download-pdf-btn"
+                      onClick={handlePdfDownload}
+                    // href="assets/pdf/emigdio-resume.pdf"
+                    >
+                      Download
+                    </Button>
                     <div className="home__address bd-grid">
                       <span className="home__info">
                         <FaPhone className="home__icon" />
