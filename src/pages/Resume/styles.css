@@ -380,57 +380,18 @@ img {
     text-align: center;
     display: block;
   }
-  .home__icon {
+  .home__icon,
+  .social__icon {
     display: initial;
   }
 }
 
-.bd-container {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.resume {
-  display: grid;
-  border-radius: 4px;
-  grid-template-columns: 0.5fr 1fr;
-  box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
-}
-
-.resume__left {
-  border-radius: 4px 0 0 4px;
-}
-
-.resume__left,
-.resume__right {
-  padding: 0 1.5rem;
-}
-
-.section-title,
-.profile__description {
-  text-align: left;
-}
-
-.home__container {
-  gap: 1.5rem;
-}
-
-.home__button-mobile {
-  display: none;
-}
-
-.skills__container,
-.hobbies__container {
-  column-gap: 3rem;
-  grid-template-columns: repeat(6, max-content);
-}
-
-.languages__container {
-  column-gap: 3rem;
-  grid-template-columns: repeat(2, max-content);
-}
-
 @media screen and (min-width: 968px) {
+  body {
+    margin: 3rem 0;
+    background-color: var(--body-color-alt);
+  }
+
   .bd-container {
     margin-left: auto;
     margin-right: auto;
@@ -475,7 +436,12 @@ img {
     column-gap: 3rem;
     grid-template-columns: repeat(2, max-content);
   }
+
+  .generate-pdf {
+    display: inline-block;
+  }
 }
+
 @media print {
   html,
   body {
@@ -491,5 +457,49 @@ img {
   }
   .download-pdf-btn {
     display: none !important;
+  }
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resume {
+    display: grid;
+    border-radius: 4px;
+    grid-template-columns: 0.5fr 1fr;
+    box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
+  }
+
+  .resume__left {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .resume__left,
+  .resume__right {
+    padding: 0 1.5rem;
+  }
+
+  .section-title,
+  .profile__description {
+    text-align: left;
+  }
+
+  .home__container {
+    gap: 1.5rem;
+  }
+
+  .home__button-mobile {
+    display: none;
+  }
+
+  .skills__container,
+  .hobbies__container {
+    column-gap: 3rem;
+    grid-template-columns: repeat(6, max-content);
+  }
+
+  .languages__container {
+    column-gap: 3rem;
+    grid-template-columns: repeat(2, max-content);
   }
 }
