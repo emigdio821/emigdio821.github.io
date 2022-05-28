@@ -9,13 +9,11 @@ const variants = {
 interface MotionDivProps {
   children: React.ReactNode;
   delay?: number;
-  mb?: string;
 }
 
 export const MotionDiv = ({
   children,
   delay = 0,
-  mb = "var(--chakra-space-10)",
 }: MotionDivProps) => {
   return (
     <motion.div
@@ -23,7 +21,6 @@ export const MotionDiv = ({
       initial="initial"
       animate="animate"
       variants={variants}
-      style={{ marginBottom: mb }}
       transition={{ duration: 0.2, type: "easeInOut", delay }}
     >
       {children}

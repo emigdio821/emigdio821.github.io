@@ -1,10 +1,10 @@
-import { ButtonGroup, Heading, Stack } from "@chakra-ui/react";
+import { ButtonGroup, Heading, Stack, Box } from '@chakra-ui/react';
 import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 import { BtnLink } from "./BtnLink";
 
 export const SocialLinks = () => {
   return (
-    <>
+    <Box mb={10}>
       <Heading as="h3" size={"md"} variant="section-title">
         On the web
       </Heading>
@@ -38,6 +38,6 @@ export const SocialLinks = () => {
           />
         </ButtonGroup>
       </Stack>
-    </>
+    </Box>
   );
 };

@@ -15,7 +15,7 @@ import {
   SiNodeDotJs,
   SiReact,
 } from "react-icons/si";
-import { Tag, ButtonGroup } from "@chakra-ui/react";
+import { Tag, ButtonGroup, Box } from '@chakra-ui/react';
 
 interface TagsProps {
   tagIcon: React.ComponentType;
@@ -47,7 +47,7 @@ export const Skills = () => {
   );
 
   return (
-    <>
+    <Box mb={10}>
       <Heading as="h3" size={"md"} variant="section-title">
         Skills
       </Heading>
@@ -64,6 +64,6 @@ export const Skills = () => {
           <Tags tagIcon={SiReact} label="React" />
         </ButtonGroup>
       </Stack>
-    </>
+    </Box>
   );
 };

@@ -6,7 +6,7 @@ export const Hobbies = () => {
   return (
     <>
       <Heading as="h3" size={"md"} variant="section-title">
-        Hobbies & Interests ♥
+        I ♥
       </Heading>
       <Paragraph>
         I enjoy listening to <SemiBoldText>Music</SemiBoldText>

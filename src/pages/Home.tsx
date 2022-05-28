@@ -1,16 +1,21 @@
-import { Container } from "@chakra-ui/react"
-import { Bio } from "../components/Bio"
-import { Hobbies } from "../components/Hobbies"
-import { HomeTitle } from "../components/HomeTitle"
-import { MotionDiv } from "../components/MotionDiv"
-import { Profile } from "../components/Profile"
-import { Skills } from "../components/Skills"
-import { SocialLinks } from '../components/SocialLinks';
+import { Container } from "@chakra-ui/react";
+import { Bio } from "../components/Bio";
+import { Hobbies } from "../components/Hobbies";
+import { HomeTitle } from "../components/HomeTitle";
+import { MotionDiv } from "../components/MotionDiv";
+import { Profile } from "../components/Profile";
+import { Skills } from "../components/Skills";
+import { SocialLinks } from "../components/SocialLinks";
 
 export const Home = () => {
   return (
     <>
-      <Container py={4} px={{ base: 4, md: 0 }} pt={20}>
+      <Container
+        py={4}
+        px={{ base: 4, md: 0 }}
+        pt={20}
+        minH="calc(100vh - 120px)"
+      >
         <MotionDiv>
           <HomeTitle />
         </MotionDiv>
@@ -31,5 +36,5 @@ export const Home = () => {
         </MotionDiv>
       </Container>
     </>
-  )
-}
+  );
+};

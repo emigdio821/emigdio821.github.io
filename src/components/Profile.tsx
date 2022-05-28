@@ -1,10 +1,10 @@
-import { Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import { Paragraph } from "./Paragraph";
 import { SemiBoldText } from "./SemiBoldText";
 
 export const Profile = () => {
   return (
-    <>
+    <Box mb={10}>
       <Heading as="h3" size={"md"} variant="section-title">
         Profile
       </Heading>
@@ -15,6 +15,6 @@ export const Profile = () => {
         <SemiBoldText>Wizeline</SemiBoldText>. I have no problem to adapt in new
         environments and technologies.
       </Paragraph>
-    </>
+    </Box>
   );
 };

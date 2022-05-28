@@ -15,7 +15,7 @@ export const Bio = () => {
   );
 
   return (
-    <>
+    <Box mb={10}>
       <Heading as="h3" size={"md"} variant="section-title">
         Bio
       </Heading>
@@ -44,6 +44,6 @@ export const Bio = () => {
         <BioYear>Present</BioYear>
         Working at <SemiBoldText>Wizeline</SemiBoldText>.
       </BioSection>
-    </>
+    </Box>
   );
 };
