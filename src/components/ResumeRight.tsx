@@ -44,7 +44,7 @@ export const ResumeRight = () => {
                 />
                 <Box
                   w={"2px"}
-                  h={"110%"}
+                  h={"100%"}
                   opacity={0.6}
                   bg={TextColorModeVal()}
                   transform="translate(5px, 0)"
@@ -76,7 +76,7 @@ export const ResumeRight = () => {
                 />
                 <Box
                   w={"2px"}
-                  h={"110%"}
+                  h={"100%"}
                   opacity={0.6}
                   bg={TextColorModeVal()}
                   transform="translate(5px, 0)"
@@ -108,7 +108,7 @@ export const ResumeRight = () => {
                 />
                 <Box
                   w={"2px"}
-                  h={"110%"}
+                  h={"100%"}
                   opacity={0.6}
                   bg={TextColorModeVal()}
                   transform="translate(5px, 0)"

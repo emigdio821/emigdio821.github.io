@@ -13,7 +13,7 @@ export const Navbar = () => {
         zIndex={1}
         position="fixed"
         css={{
-          backdropFilter: "blur(20px)",
+          backdropFilter: "blur(10px)",
         }}
         bg={useColorModeValue("#fbfbfb80", "#21212190")}
       >
@@ -43,11 +43,9 @@ export const Navbar = () => {
             </Flex>
           </Box>
           <Flex alignItems={"center"}>
-            <NavLink to="/resume">
-              <Button marginLeft="2" variant="solid">
-                Resume
-              </Button>
-            </NavLink>
+            <Button to="/resume" marginLeft="2" variant="solid" as={NavLink}>
+              Resume
+            </Button>
             <ThemeSwitcher />
           </Flex>
         </Flex>
