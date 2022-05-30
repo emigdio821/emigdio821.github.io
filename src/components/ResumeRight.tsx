@@ -22,42 +22,35 @@ import {
 } from "react-icons/fa";
 import { MotionDiv } from "./MotionDiv";
 import { SemiBoldText } from "./SemiBoldText";
+import { TextColorModeVal } from "utils/ColorModeVal";
+import { SectionTitle } from "./SectionTitle";
 import styles from "assets/css/common.module.css";
 
 export const ResumeRight = () => {
-  const textColorMode = useColorModeValue("#333", "#f0efef");
   return (
     <>
       <Box p={4} bg={useColorModeValue("#fafafa", "#212121")}>
         <MotionDiv delay={0.1}>
           <Box mb={6}>
-            <Heading
-              mb={3}
-              as="h4"
-              size={"md"}
-              letterSpacing={3}
-              color={textColorMode}
-            >
-              Experience
-            </Heading>
+            <SectionTitle>Experience</SectionTitle>
             <Flex mb={3}>
               <Box pr={4}>
                 <Box
                   w={3}
                   h={3}
                   mt={1}
-                  bg={textColorMode}
+                  bg={TextColorModeVal()}
                   borderRadius="full"
                 />
                 <Box
                   w={"2px"}
                   h={"110%"}
                   opacity={0.6}
-                  bg={textColorMode}
+                  bg={TextColorModeVal()}
                   transform="translate(5px, 0)"
                 />
               </Box>
-              <Box color={textColorMode} textAlign="left">
+              <Box color={TextColorModeVal()} textAlign="left">
                 <Heading as="h5" size={"sm"} fontWeight={600}>
                   Web Developer
                 </Heading>
@@ -78,18 +71,18 @@ export const ResumeRight = () => {
                   w={3}
                   h={3}
                   mt={1}
-                  bg={textColorMode}
+                  bg={TextColorModeVal()}
                   borderRadius="full"
                 />
                 <Box
                   w={"2px"}
                   h={"110%"}
                   opacity={0.6}
-                  bg={textColorMode}
+                  bg={TextColorModeVal()}
                   transform="translate(5px, 0)"
                 />
               </Box>
-              <Box color={textColorMode} textAlign="left">
+              <Box color={TextColorModeVal()} textAlign="left">
                 <Heading as="h5" size={"sm"} fontWeight={600}>
                   Software Engineer
                 </Heading>
@@ -110,18 +103,18 @@ export const ResumeRight = () => {
                   w={3}
                   h={3}
                   mt={1}
-                  bg={textColorMode}
+                  bg={TextColorModeVal()}
                   borderRadius="full"
                 />
                 <Box
                   w={"2px"}
                   h={"110%"}
                   opacity={0.6}
-                  bg={textColorMode}
+                  bg={TextColorModeVal()}
                   transform="translate(5px, 0)"
                 />
               </Box>
-              <Box color={textColorMode} textAlign="left">
+              <Box color={TextColorModeVal()} textAlign="left">
                 <Heading as="h5" size={"sm"} fontWeight={600}>
                   Software Engineer
                 </Heading>
@@ -141,11 +134,11 @@ export const ResumeRight = () => {
                   w={3}
                   h={3}
                   mt={1}
-                  bg={textColorMode}
+                  bg={TextColorModeVal()}
                   borderRadius="full"
                 />
               </Box>
-              <Box color={textColorMode} textAlign="left">
+              <Box color={TextColorModeVal()} textAlign="left">
                 <Heading as="h5" size={"sm"} fontWeight={600}>
                   Software Engineer
                 </Heading>
@@ -159,19 +152,11 @@ export const ResumeRight = () => {
         </MotionDiv>
         <MotionDiv delay={0.2}>
           <Box mb={6}>
-            <Heading
-              as="h4"
-              mb={3}
-              size={"md"}
-              letterSpacing={3}
-              color={textColorMode}
-            >
-              Skills
-            </Heading>
+            <SectionTitle>Skills</SectionTitle>
             <Grid
               columnGap={6}
               textAlign="center"
-              color={textColorMode}
+              color={TextColorModeVal()}
               className={styles["skills-grid"]}
               templateColumns="repeat(6, max-content)"
             >
@@ -202,22 +187,13 @@ export const ResumeRight = () => {
             </Grid>
           </Box>
         </MotionDiv>
-
         <MotionDiv delay={0.3}>
           <Box mb={6}>
-            <Heading
-              mb={3}
-              as="h4"
-              size={"md"}
-              letterSpacing={3}
-              color={textColorMode}
-            >
-              Hobbies & Interests
-            </Heading>
+            <SectionTitle>Hobbies & Interests</SectionTitle>
             <Grid
               columnGap={6}
               textAlign="center"
-              color={textColorMode}
+              color={TextColorModeVal()}
               className={styles["hobbies-grid"]}
               templateColumns="repeat(5, max-content)"
             >
