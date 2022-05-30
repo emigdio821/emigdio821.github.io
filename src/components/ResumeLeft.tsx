@@ -2,7 +2,6 @@ import {
   Box,
   Text,
   Button,
-  Avatar,
   Heading,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -15,9 +14,9 @@ import {
   FaMapMarkedAlt,
 } from "react-icons/fa";
 import { BtnLink } from "./BtnLink";
+import { EmAvatar } from "./EmAvatar";
 import { MotionDiv } from "./MotionDiv";
 import { SemiBoldText } from "./SemiBoldText";
-import ProfileImg from "assets/images/em.jpg";
 import styles from "assets/css/common.module.css";
 
 interface ResumeLeftProps {
@@ -31,14 +30,8 @@ export const ResumeLeft = ({ pdfCallback }: ResumeLeftProps) => {
       <Box p={4} bg={useColorModeValue("#f0efef", "#181616")}>
         <Box mb={6}>
           <MotionDiv delay={0.1}>
-            <Avatar
-              mb={4}
-              size="2xl"
-              src={ProfileImg}
-              bg="transparent"
-              name="Emigdio Torres"
-            />
-            <Box flexGrow={1} mb={6}>
+            <EmAvatar />
+            <Box flexGrow={1} mb={6} mt={4} >
               <Heading as="h3" size={"lg"} color={textColorMode}>
                 Emigdio Torres
               </Heading>
