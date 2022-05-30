@@ -18,7 +18,6 @@ import {
   FaCss3Alt,
   FaJsSquare,
   FaKeyboard,
-  FaLanguage,
   FaHeadphonesAlt,
 } from "react-icons/fa";
 import { MotionDiv } from "./MotionDiv";
@@ -33,7 +32,7 @@ export const ResumeRight = () => {
         <MotionDiv delay={0.1}>
           <Box mb={6}>
             <Heading
-              mb={4}
+              mb={3}
               as="h4"
               size={"md"}
               letterSpacing={3}
@@ -41,8 +40,8 @@ export const ResumeRight = () => {
             >
               Experience
             </Heading>
-            <Flex mb={6}>
-              <Box pr={4} opacity={0.6}>
+            <Flex mb={3}>
+              <Box pr={4}>
                 <Box
                   w={3}
                   h={3}
@@ -52,7 +51,8 @@ export const ResumeRight = () => {
                 />
                 <Box
                   w={"2px"}
-                  h={"120%"}
+                  h={"110%"}
+                  opacity={0.6}
                   bg={textColorMode}
                   transform="translate(5px, 0)"
                 />
@@ -72,8 +72,8 @@ export const ResumeRight = () => {
                 </Text>
               </Box>
             </Flex>
-            <Flex mb={6}>
-              <Box pr={4} opacity={0.6}>
+            <Flex mb={3}>
+              <Box pr={4}>
                 <Box
                   w={3}
                   h={3}
@@ -83,7 +83,8 @@ export const ResumeRight = () => {
                 />
                 <Box
                   w={"2px"}
-                  h={"120%"}
+                  h={"110%"}
+                  opacity={0.6}
                   bg={textColorMode}
                   transform="translate(5px, 0)"
                 />
@@ -103,8 +104,8 @@ export const ResumeRight = () => {
                 </Text>
               </Box>
             </Flex>
-            <Flex mb={6}>
-              <Box pr={4} opacity={0.6}>
+            <Flex mb={3}>
+              <Box pr={4}>
                 <Box
                   w={3}
                   h={3}
@@ -114,7 +115,8 @@ export const ResumeRight = () => {
                 />
                 <Box
                   w={"2px"}
-                  h={"120%"}
+                  h={"110%"}
+                  opacity={0.6}
                   bg={textColorMode}
                   transform="translate(5px, 0)"
                 />
@@ -133,8 +135,8 @@ export const ResumeRight = () => {
                 </Text>
               </Box>
             </Flex>
-            <Flex mb={6}>
-              <Box pr={4} opacity={0.6}>
+            <Flex>
+              <Box pr={4}>
                 <Box
                   w={3}
                   h={3}
@@ -155,42 +157,11 @@ export const ResumeRight = () => {
             </Flex>
           </Box>
         </MotionDiv>
-
         <MotionDiv delay={0.2}>
           <Box mb={6}>
             <Heading
-              mb={4}
               as="h4"
-              size={"md"}
-              letterSpacing={3}
-              color={textColorMode}
-            >
-              Languages
-            </Heading>
-            <Grid
-              columnGap={6}
-              textAlign="center"
-              color={textColorMode}
-              className={styles["languages-grid"]}
-              templateColumns="repeat(2, max-content)"
-            >
-              <Box>
-                <Icon as={FaLanguage} fontSize="2xl" />
-                <Text fontSize="sm">Spanish</Text>
-              </Box>
-              <Box>
-                <Icon as={FaLanguage} fontSize="2xl" />
-                <Text fontSize="sm">English</Text>
-              </Box>
-            </Grid>
-          </Box>
-        </MotionDiv>
-
-        <MotionDiv delay={0.3}>
-          <Box mb={6}>
-            <Heading
-              as="h4"
-              mb={4}
+              mb={3}
               size={"md"}
               letterSpacing={3}
               color={textColorMode}
@@ -232,10 +203,10 @@ export const ResumeRight = () => {
           </Box>
         </MotionDiv>
 
-        <MotionDiv delay={0.4}>
+        <MotionDiv delay={0.3}>
           <Box mb={6}>
             <Heading
-              mb={4}
+              mb={3}
               as="h4"
               size={"md"}
               letterSpacing={3}

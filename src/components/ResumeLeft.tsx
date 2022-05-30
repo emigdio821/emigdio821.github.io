@@ -101,14 +101,14 @@ export const ResumeLeft = ({ pdfCallback }: ResumeLeftProps) => {
             <Heading
               as="h4"
               size={"md"}
-              mb={4}
+              mb={3}
               letterSpacing={3}
               color={textColorMode}
             >
               Profile
             </Heading>
             <Box color={textColorMode}>
-              <Text mb={4} fontSize="sm">
+              <Text fontSize="sm">
                 <SemiBoldText>Telematics Engineer</SemiBoldText> with experience
                 in Software Engineering using current programming standards.
               </Text>
@@ -125,7 +125,7 @@ export const ResumeLeft = ({ pdfCallback }: ResumeLeftProps) => {
             <Heading
               as="h4"
               size={"md"}
-              mb={4}
+              mb={3}
               letterSpacing={3}
               color={textColorMode}
             >
