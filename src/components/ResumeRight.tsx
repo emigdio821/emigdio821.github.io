@@ -1,47 +1,48 @@
-import { Box, Heading, useColorModeValue, Text } from "@chakra-ui/react";
 import {
-  FaCss3Alt,
+  Box,
+  Text,
+  Grid,
+  Icon,
+  Flex,
+  Heading,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import {
   FaDrum,
-  FaGitAlt,
-  FaHeadphonesAlt,
   FaHtml5,
+  FaReact,
+  FaSteam,
+  FaLaptop,
+  FaGitAlt,
+  FaNodeJs,
+  FaCss3Alt,
   FaJsSquare,
   FaKeyboard,
   FaLanguage,
-  FaLaptop,
-  FaNodeJs,
-  FaReact,
-  FaSteam,
+  FaHeadphonesAlt,
 } from "react-icons/fa";
 import { MotionDiv } from "./MotionDiv";
 import { SemiBoldText } from "./SemiBoldText";
-import "../pages/Resume/styles.css";
+import styles from "assets/css/common.module.css";
 
 export const ResumeRight = () => {
   const textColorMode = useColorModeValue("#333", "#f0efef");
   return (
     <>
-      <Box
-        p={4}
-        bg={useColorModeValue("#fafafa", "#212121")}
-      >
+      <Box p={4} bg={useColorModeValue("#fafafa", "#212121")}>
         <MotionDiv delay={0.1}>
-          <Box
-            mb={6}
-            className="common-box"
-            textAlign={{ base: "center", md: "left" }}
-          >
+          <Box mb={6}>
             <Heading
+              mb={4}
               as="h4"
               size={"md"}
-              mb={4}
               letterSpacing={3}
               color={textColorMode}
             >
               Experience
             </Heading>
-            <Box className="experience__content" mb={6}>
-              <Box pr={4}>
+            <Flex mb={6}>
+              <Box pr={4} opacity={0.6}>
                 <Box
                   w={3}
                   h={3}
@@ -70,9 +71,9 @@ export const ResumeRight = () => {
                   bank.
                 </Text>
               </Box>
-            </Box>
-            <Box className="experience__content" mb={6}>
-              <Box pr={4}>
+            </Flex>
+            <Flex mb={6}>
+              <Box pr={4} opacity={0.6}>
                 <Box
                   w={3}
                   h={3}
@@ -101,10 +102,9 @@ export const ResumeRight = () => {
                   portal for an education platform.
                 </Text>
               </Box>
-            </Box>
-
-            <Box className="experience__content" mb={6}>
-              <Box pr={4}>
+            </Flex>
+            <Flex mb={6}>
+              <Box pr={4} opacity={0.6}>
                 <Box
                   w={3}
                   h={3}
@@ -132,9 +132,9 @@ export const ResumeRight = () => {
                   builder.
                 </Text>
               </Box>
-            </Box>
-            <Box className="experience__content" mb={6}>
-              <Box pr={4}>
+            </Flex>
+            <Flex mb={6}>
+              <Box pr={4} opacity={0.6}>
                 <Box
                   w={3}
                   h={3}
@@ -152,119 +152,125 @@ export const ResumeRight = () => {
                 </Text>
                 <Text fontSize="sm">Currently working with React.</Text>
               </Box>
-            </Box>
+            </Flex>
           </Box>
         </MotionDiv>
 
         <MotionDiv delay={0.2}>
-          <Box
-            mb={6}
-            className="common-box"
-            textAlign={{ base: "center", md: "left" }}
-          >
+          <Box mb={6}>
             <Heading
+              mb={4}
               as="h4"
               size={"md"}
-              mb={4}
               letterSpacing={3}
               color={textColorMode}
             >
               Languages
             </Heading>
-            <Box className="languages__container bd-grid" color={textColorMode}>
-              <Box className="languages__content">
-                <FaLanguage className="languages__icon" />
+            <Grid
+              columnGap={6}
+              textAlign="center"
+              color={textColorMode}
+              className={styles["languages-grid"]}
+              templateColumns="repeat(2, max-content)"
+            >
+              <Box>
+                <Icon as={FaLanguage} fontSize="2xl" />
                 <Text fontSize="sm">Spanish</Text>
               </Box>
-              <Box className="languages__content">
-                <FaLanguage className="languages__icon" />
+              <Box>
+                <Icon as={FaLanguage} fontSize="2xl" />
                 <Text fontSize="sm">English</Text>
               </Box>
-            </Box>
+            </Grid>
           </Box>
         </MotionDiv>
 
         <MotionDiv delay={0.3}>
-          <Box
-            mb={6}
-            className="common-box"
-            textAlign={{ base: "center", md: "left" }}
-          >
+          <Box mb={6}>
             <Heading
               as="h4"
-              size={"md"}
               mb={4}
+              size={"md"}
               letterSpacing={3}
               color={textColorMode}
             >
               Skills
             </Heading>
-            <Box className="skills__container bd-grid" color={textColorMode}>
-              <Box className="skills__content">
-                <FaCss3Alt className="skills__icon" />
+            <Grid
+              columnGap={6}
+              textAlign="center"
+              color={textColorMode}
+              className={styles["skills-grid"]}
+              templateColumns="repeat(6, max-content)"
+            >
+              <Box>
+                <Icon as={FaCss3Alt} fontSize="2xl" />
                 <Text fontSize="sm">CSS</Text>
               </Box>
-              <Box className="skills__content">
-                <FaHtml5 className="skills__icon" />
+              <Box>
+                <Icon as={FaHtml5} fontSize="2xl" />
                 <Text fontSize="sm">HTML</Text>
               </Box>
-              <Box className="skills__content">
-                <FaJsSquare className="skills__icon" />
+              <Box>
+                <Icon as={FaJsSquare} fontSize="2xl" />
                 <Text fontSize="sm">JS</Text>
               </Box>
-              <Box className="skills__content">
-                <FaGitAlt className="skills__icon" />
+              <Box>
+                <Icon as={FaGitAlt} fontSize="2xl" />
                 <Text fontSize="sm">Git</Text>
               </Box>
-              <Box className="skills__content">
-                <FaReact className="skills__icon" />
+              <Box>
+                <Icon as={FaReact} fontSize="2xl" />
                 <Text fontSize="sm">React</Text>
               </Box>
-              <Box className="skills__content">
-                <FaNodeJs className="skills__icon" />
+              <Box>
+                <Icon as={FaNodeJs} fontSize="2xl" />
                 <Text fontSize="sm">Node</Text>
               </Box>
-            </Box>
+            </Grid>
           </Box>
         </MotionDiv>
 
         <MotionDiv delay={0.4}>
-          <Box
-            mb={6}
-            className="common-box"
-            textAlign={{ base: "center", md: "left" }}
-          >
+          <Box mb={6}>
             <Heading
+              mb={4}
               as="h4"
               size={"md"}
-              mb={4}
               letterSpacing={3}
               color={textColorMode}
             >
               Hobbies & Interests
             </Heading>
-            <Box className="hobbies__container bd-grid" color={textColorMode}>
-              <Box className="hobbies__content">
-                <FaDrum className="hobbies__icon" />
+            <Grid
+              columnGap={6}
+              textAlign="center"
+              color={textColorMode}
+              className={styles["hobbies-grid"]}
+              templateColumns="repeat(5, max-content)"
+            >
+              <Box>
+                <Icon as={FaDrum} fontSize="2xl" />
                 <Text fontSize="sm">Drums</Text>
               </Box>
-              <Box className="hobbies__content">
-                <FaHeadphonesAlt className="hobbies__icon" />
+              <Box>
+                <Icon as={FaHeadphonesAlt} fontSize="2xl" />
                 <Text fontSize="sm">Music</Text>
               </Box>
-              <Box className="hobbies__content">
-                <FaSteam className="hobbies__icon" />
+              <Box>
+                <Icon as={FaSteam} fontSize="2xl" />
                 <Text fontSize="sm">Games</Text>
               </Box>
-              <Box className="hobbies__content">
-                <FaLaptop className="hobbies__icon" />
+              <Box>
+                <Icon as={FaLaptop} fontSize="2xl" />
                 <Text fontSize="sm">Tech</Text>
               </Box>
-              <Box className="hobbies__content">
-                <FaKeyboard className="hobbies__icon" />
+              <Box>
+                <Icon as={FaKeyboard} fontSize="2xl" />
                 <Text fontSize="sm">KBoards</Text>
               </Box>
-            </Box>
+            </Grid>
           </Box>
         </MotionDiv>
       </Box>

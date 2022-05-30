@@ -1,7 +1,7 @@
-import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import { routes } from "../routes/routes";
+import { routes } from "routes/routes";
 
 interface ScrollTopProps {
   children: React.ReactNode;

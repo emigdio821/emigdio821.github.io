@@ -12,8 +12,10 @@ export const Navbar = () => {
         w="100%"
         zIndex={1}
         position="fixed"
-        css={{ backdropFilter: "blur(10px)" }}
-        bg={useColorModeValue("#ffffff40", "#20202380")}
+        css={{
+          backdropFilter: "blur(20px)",
+        }}
+        bg={useColorModeValue("#fbfbfb80", "#21212190")}
       >
         <Flex
           h={16}

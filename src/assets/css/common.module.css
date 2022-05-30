@@ -1,0 +1,31 @@
+.text-blinking {
+  margin-left: 6px;
+  font-weight: bolder;
+  animation: blinking 0.5s alternate infinite;
+}
+
+@keyframes blinking {
+  from {
+    color: transparent;
+  }
+  to {
+    color: var(--chakra-colors-chakra-body-text);
+  }
+}
+
+@media print {
+  * {
+    print-color-adjust: exact;
+  }
+  .main-grid {
+    grid-template-columns: 0.5fr 1fr !important;
+  }
+  .download-pdf-btn {
+    display: none !important;
+  }
+  .hobbies-grid,
+  .skills-grid,
+  .languages-grid {
+    column-gap: 1.5rem;
+  }
+}

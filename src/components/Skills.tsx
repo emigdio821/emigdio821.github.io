@@ -1,21 +1,21 @@
 import {
-  Heading,
   Show,
   Icon,
   Stack,
+  Heading,
   TagLabel,
   TagLeftIcon,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Paragraph } from "./Paragraph";
 import {
+  SiGit,
+  SiReact,
+  SiNodeDotJs,
   SiJavascript,
   SiTypescript,
-  SiGit,
-  SiNodeDotJs,
-  SiReact,
 } from "react-icons/si";
-import { Tag, ButtonGroup, Box } from '@chakra-ui/react';
+import { Tag, ButtonGroup, Box } from "@chakra-ui/react";
 
 interface TagsProps {
   tagIcon: React.ComponentType;
@@ -48,7 +48,7 @@ export const Skills = () => {
 
   return (
     <Box mb={10}>
-      <Heading as="h3" size={"md"} variant="section-title">
+      <Heading as="h3" size={"md"} mb={4}>
         Skills
       </Heading>
       <Paragraph>

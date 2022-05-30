@@ -1,4 +1,4 @@
-import { NotFound, Home, Resume } from "../pages";
+import { NotFound, Home, Resume } from "pages";
 
 interface Route {
   to: string;

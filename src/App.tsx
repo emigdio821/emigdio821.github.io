@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Container } from "@chakra-ui/react";
 import { Navbar } from "./components/Nabvar";
 import { BrowserRouter } from "react-router-dom";
 import theme from "./lib/theme";
@@ -10,7 +10,15 @@ export const App = () => {
     <BrowserRouter>
       <ChakraProvider theme={theme}>
         <Navbar />
-        <AppdRoutes />
+        <Container
+          py={4}
+          px={{ base: 4, md: 0 }}
+          pt={20}
+          maxW="4xl"
+          minH="calc(100vh - 120px)"
+        >
+          <AppdRoutes />
+        </Container>
         <Footer />
       </ChakraProvider>
     </BrowserRouter>

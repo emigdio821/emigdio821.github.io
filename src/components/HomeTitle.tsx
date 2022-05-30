@@ -1,25 +1,30 @@
-// import ProfileImg from "../assets/images/em.jpg"
-import { Avatar, Box, Heading, Stack } from "@chakra-ui/react";
-import ProfileImg from "../assets/images/_doge.png";
+import { Avatar, Box, Heading, Stack, Text } from "@chakra-ui/react";
+import ProfileImg from "assets/images/em.jpg";
+import styles from "assets/css/common.module.css";
 
 export const HomeTitle = () => {
   return (
     <>
       <Stack
-        justify="space-between"
-        direction={{ base: "column", md: "row" }}
-        align="center"
         pb={10}
+        align={{ base: "inherit", md: "center" }}
+        direction={{ base: "column-reverse", md: "row" }}
       >
         <Box display={"flex"}>
-          <Box flexGrow={1} textAlign={{ base: "center", md: "left" }}>
+          <Box mr={{ base: "inherit", md: 5 }}>
             <Heading as="h2" size={"xl"}>
               Emigdio Torres
+              <span className={styles["text-blinking"]}>|</span>
             </Heading>
-            <p>Software Engineer</p>
+            <Text fontSize="lg">Software Engineer</Text>
           </Box>
         </Box>
-        <Avatar src={ProfileImg} name="Emigdio Torres" size="2xl" />
+        <Avatar
+          src={ProfileImg}
+          name="Emigdio Torres"
+          bg="transparent"
+          size="2xl"
+        />
       </Stack>
     </>
   );

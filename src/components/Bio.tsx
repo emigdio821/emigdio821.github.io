@@ -16,7 +16,7 @@ export const Bio = () => {
 
   return (
     <Box mb={10}>
-      <Heading as="h3" size={"md"} variant="section-title">
+      <Heading as="h3" size={"md"} mb={4}>
         Bio
       </Heading>
       <BioSection>

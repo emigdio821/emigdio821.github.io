@@ -1,3 +1,3 @@
 export { Home } from "./Home";
-export { Resume } from "./Resume/Resume";
-export { NotFound } from "./NotFound/NotFound";
+export { Resume } from "./Resume";
+export { NotFound } from "./NotFound";

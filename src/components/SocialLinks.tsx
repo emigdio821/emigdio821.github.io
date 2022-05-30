@@ -5,7 +5,7 @@ import { BtnLink } from "./BtnLink";
 export const SocialLinks = () => {
   return (
     <Box mb={10}>
-      <Heading as="h3" size={"md"} variant="section-title">
+      <Heading as="h3" size={"md"} mb={4}>
         On the web
       </Heading>
       <Stack pt="2" pb="4" direction={{ base: "column", md: "row" }}>
