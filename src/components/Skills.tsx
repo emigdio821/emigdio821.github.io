@@ -5,7 +5,6 @@ import {
   Heading,
   TagLabel,
   TagLeftIcon,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { Paragraph } from "./Paragraph";
 import {
@@ -16,6 +15,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { Tag, ButtonGroup, Box } from "@chakra-ui/react";
+import { TextColorModeVal } from "utils/ColorModeVal";
 
 interface TagsProps {
   tagIcon: React.ComponentType;
@@ -31,17 +31,14 @@ export const Skills = () => {
       opacity={0.8}
       px={{ base: 4, md: 5 }}
       py={{ base: 4, md: 0 }}
-      color={useColorModeValue(
-        "inherit",
-        "var(--chakra-colors-chakra-body-text)"
-      )}
+      color={TextColorModeVal()}
     >
       <Show above="sm">
-        <TagLeftIcon as={tagIcon} fontSize={"xl"} />
-        <TagLabel>{label}</TagLabel>
+        <TagLeftIcon as={tagIcon} fontSize="lg" />
+        <TagLabel fontSize="sm">{label}</TagLabel>
       </Show>
       <Show below="sm">
-        <Icon as={tagIcon} fontSize={"2xl"} />
+        <Icon as={tagIcon} fontSize={"xl"} />
       </Show>
     </Tag>
   );

@@ -32,10 +32,11 @@ export const Navbar = () => {
                   variant="link"
                   leftIcon={<BiCoffee />}
                   _hover={{
-                    transform: "translateY(-1px)",
+                    transform: "translateY(-2px)",
                     background: "transparent",
                   }}
-                  colorScheme={useColorModeValue("inherit", "WhiteAlpha.900")}
+                  color={useColorModeValue("black", "white")}
+                  _active={{ transform: "translateY(0)" }}
                 >
                   Emigdio<b>Torres</b>
                 </Button>
@@ -43,7 +44,21 @@ export const Navbar = () => {
             </Flex>
           </Box>
           <Flex alignItems={"center"}>
-            <Button to="/resume" marginLeft="2" variant="solid" as={NavLink}>
+            <Button
+              size="sm"
+              to="/resume"
+              as={NavLink}
+              bg="#ECF5FB"
+              color="#333"
+              variant="solid"
+              _hover={{
+                bg: "#D7EAF7",
+                boxShadow: "lg",
+                transform: "translateY(-2px)",
+              }}
+              _activeLink={{ bg: "#D7EAF7" }}
+              _active={{ transform: "translateY(0)" }}
+            >
               Resume
             </Button>
             <ThemeSwitcher />

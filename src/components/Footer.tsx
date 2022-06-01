@@ -15,7 +15,7 @@ export const Footer = () => (
       <Text opacity={0.8} fontSize="sm">
         &copy; {new Date().getFullYear()} Emigdio Torres. All rights reserved.
       </Text>
-      <ButtonGroup variant="ghost" opacity={0.8}>
+      <ButtonGroup opacity={0.8}>
         <BtnLink
           text="Source"
           href="https://github.com/emigdio821/emigdio821.github.io"

@@ -18,8 +18,8 @@ export const BtnLink = ({
   <Button
     as="a"
     size={size}
-    target="_blank"
     href={href}
+    target="_blank"
     aria-label={text}
     variant={variant}
     leftIcon={<Icon />}

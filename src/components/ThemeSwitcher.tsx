@@ -25,13 +25,20 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = (props) => {
         key={useColorModeValue("light", "dark")}
       >
         <IconButton
-          fontSize="lg"
+          size="sm"
           marginLeft="2"
           variant="solid"
           icon={<SwitchIcon />}
           onClick={toggleColorMode}
           aria-label={`Switch to ${text} mode`}
-          colorScheme={useColorModeValue("purple", "orange")}
+          color="#333"
+          bg={useColorModeValue("#DEDBE9", "#FFF8D7")}
+          _hover={{
+            bg: useColorModeValue("#CFCBDF", "#FFF4BE"),
+            boxShadow: "lg",
+            transform: "translateY(-2px)",
+          }}
+          _active={{ transform: "translateY(0)" }}
           {...props}
         />
       </motion.div>
