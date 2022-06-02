@@ -31,6 +31,10 @@ const components = {
   },
 };
 
+// const fonts = {
+//   html: "'Roboto'",
+// };
+
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: true,
