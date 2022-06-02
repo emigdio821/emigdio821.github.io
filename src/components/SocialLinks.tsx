@@ -1,23 +1,23 @@
-import { ButtonGroup, Heading, Stack, Box } from '@chakra-ui/react';
+import { ButtonGroup, Heading, Stack, Box } from "@chakra-ui/react";
 import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 import { BtnLink } from "./BtnLink";
 
 export const SocialLinks = () => {
   return (
     <Box mb={10}>
-      <Heading as="h3" size={"md"} mb={4}>
+      <Heading as="h2" size={"2xl"} mb={4}>
         On the web
       </Heading>
       <Stack pt="2" pb="4" direction={{ base: "column", md: "row" }}>
         <ButtonGroup>
           <BtnLink
-            size="md"
+            size="lg"
             text="LinkedIn"
             Icon={FaLinkedinIn}
             href="https://www.linkedin.com/in/emigdio821/"
           />
           <BtnLink
-            size="md"
+            size="lg"
             text="GitHub"
             Icon={FaGithub}
             href="https://github.com/emigdio821/"
@@ -25,13 +25,13 @@ export const SocialLinks = () => {
         </ButtonGroup>
         <ButtonGroup>
           <BtnLink
-            size="md"
+            size="lg"
             text="Twitter"
             Icon={FaTwitter}
             href="https://twitter.com/emigdio821"
           />
           <BtnLink
-            size="md"
+            size="lg"
             text="Instagram"
             Icon={FaInstagram}
             href="https://www.instagram.com/_emigdiotr/"

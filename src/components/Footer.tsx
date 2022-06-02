@@ -3,7 +3,7 @@ import { BtnLink } from "./BtnLink";
 import { FaGithub } from "react-icons/fa";
 
 export const Footer = () => (
-  <Container as="footer" role="contentinfo" px={0} mt={10}>
+  <Container as="footer" role="contentinfo" px={0} mt={20}>
     <Divider />
     <Stack
       pt="2"

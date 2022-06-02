@@ -6,7 +6,7 @@ interface ParagraphProps {
 
 export const Paragraph = ({ children }: ParagraphProps) => {
   return (
-    <Text>
+    <Text fontSize="2xl">
       {children}
     </Text>
   )

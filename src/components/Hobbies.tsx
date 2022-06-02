@@ -5,7 +5,7 @@ import { SemiBoldText } from "./SemiBoldText";
 export const Hobbies = () => {
   return (
     <>
-      <Heading as="h3" size={"md"} mb={4}>
+      <Heading as="h2" size={"2xl"} mb={4}>
         I ♥
       </Heading>
       <Paragraph>

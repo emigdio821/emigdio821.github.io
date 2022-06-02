@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom";
 import { BiCoffee } from "react-icons/bi";
+import { NavLink } from "react-router-dom";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import { Box, Flex, Button, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Button, } from "@chakra-ui/react";
 
 export const Navbar = () => {
   return (
@@ -15,7 +15,7 @@ export const Navbar = () => {
         css={{
           backdropFilter: "blur(10px)",
         }}
-        bg={useColorModeValue("#fbfbfb80", "#21212190")}
+        bg="rgba(33, 33, 33, 0.9)"
       >
         <Flex
           h={16}
@@ -35,7 +35,7 @@ export const Navbar = () => {
                     transform: "translateY(-2px)",
                     background: "transparent",
                   }}
-                  color={useColorModeValue("black", "white")}
+                  color="white"
                   _active={{ transform: "translateY(0)" }}
                 >
                   Emigdio<b>Torres</b>
@@ -53,7 +53,6 @@ export const Navbar = () => {
               variant="solid"
               _hover={{
                 bg: "#D7EAF7",
-                boxShadow: "lg",
                 transform: "translateY(-2px)",
               }}
               _activeLink={{ bg: "#D7EAF7" }}

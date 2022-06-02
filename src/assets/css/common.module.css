@@ -9,7 +9,7 @@
     color: transparent;
   }
   to {
-    color: var(--chakra-colors-chakra-body-text);
+    color: inherit;
   }
 }
 
