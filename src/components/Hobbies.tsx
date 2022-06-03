@@ -1,23 +1,26 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
+import { MotionDiv } from "./MotionDiv";
 
 export const Hobbies = () => {
   return (
-    <Flex
-      pb={40}
-      alignItems="center"
-      flexDirection="column"
-      justifyContent="center"
-    >
-      <Box>
-        <Box letterSpacing="-0.12rem">
-          <Heading as="h2" size="2xl">
-            I enjoy listening to Music. When I have some free time I like to
-            play Videogames or play the Drums. I like to build Custom PC&lsquo;s
-            and Custom Keyboards. I am also passionate about new Technology
-            topics.
-          </Heading>
+    <MotionDiv>
+      <Flex
+        pb={40}
+        alignItems="center"
+        flexDirection="column"
+        justifyContent="center"
+      >
+        <Box>
+          <Box letterSpacing="-0.12rem">
+            <Heading as="h2" size="2xl" lineHeight={1.1}>
+              I love Music. On my free time I like to
+              play Videogames or play Drums. I like to build Custom PC&prime;s
+              and Custom Keyboards. I&prime;m also passionate about new Technology
+              topics 🤓.
+            </Heading>
+          </Box>
         </Box>
-      </Box>
-    </Flex>
+      </Flex>
+    </MotionDiv>
   );
 };

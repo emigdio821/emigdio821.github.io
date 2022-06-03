@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import { BtnLink } from "./BtnLink";
 import { EmAvatar } from "./EmAvatar";
+import { MotionDiv } from "./MotionDiv";
 import { SemiBoldText } from "./SemiBoldText";
 import { SectionTitle } from "./SectionTitle";
 import { TextColorModeVal } from "utils/ColorModeVal";
@@ -28,7 +29,9 @@ export const ResumeLeft = ({ pdfCallback }: ResumeLeftProps) => (
   <>
     <Box p={4} bg={useColorModeValue("#f0efef", "#181616")}>
       <Box mb={6}>
-        <EmAvatar width={120} height={120} />
+        <MotionDiv y={-50}>
+          <EmAvatar width={120} height={120} />
+        </MotionDiv>
         <Box flexGrow={1} mb={6} mt={4}>
           <Heading as="h3" size={"lg"} color={TextColorModeVal()}>
             Emigdio Torres
@@ -116,7 +119,7 @@ export const ResumeLeft = ({ pdfCallback }: ResumeLeftProps) => (
           Telematics Engineer
         </Heading>
         <Box color={TextColorModeVal()}>
-          <Text fontSize="sm">Engineer&lsquo;s Degree</Text>
+          <Text fontSize="sm">Engineer&prime;s Degree</Text>
           <Text fontSize="sm">University of Colima</Text>
           <Text fontSize="sm">2010 - 2014</Text>
         </Box>

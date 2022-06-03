@@ -4,16 +4,33 @@
   animation: blinking 0.5s alternate infinite;
 }
 
+.coffe-anim {
+  animation: coffee 2s alternate infinite;
+}
+
 @keyframes blinking {
   from {
     color: transparent;
   }
+
   to {
     color: inherit;
   }
 }
 
+@keyframes coffee {
+  0% {
+    transform: rotate(40deg);
+  }
+
+  30%,
+  100% {
+    transform: rotate(0)
+  }
+}
+
 @media print {
+
   html,
   body {
     margin: 0 !important;
@@ -22,12 +39,15 @@
     overflow: initial !important;
     print-color-adjust: exact;
   }
+
   .main-grid {
     grid-template-columns: 0.5fr 1fr !important;
   }
+
   .download-pdf-btn {
     display: none !important;
   }
+
   .hobbies-grid,
   .skills-grid,
   .languages-grid {

@@ -35,10 +35,14 @@ const components = {
 //   html: "'Roboto'",
 // };
 
+const shadows = {
+  outline: "0 0 0 3px #B2ABCC",
+};
+
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: true,
 };
 
-const theme = extendTheme({ config, styles, components });
+const theme = extendTheme({ config, styles, components, shadows });
 export default theme;

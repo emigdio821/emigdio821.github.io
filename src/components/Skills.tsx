@@ -1,6 +1,11 @@
 import { useContext, useRef } from "react";
-import { Heading, Box, Flex } from "@chakra-ui/react";
+import { Heading, Box, Flex, Image, Stack } from "@chakra-ui/react";
 import { ScrollContext } from "context/ScrollObserver";
+import jsSvg from "assets/images/js.svg";
+import tsSvg from "assets/images/ts.svg";
+import reactSvg from "assets/images/react.svg";
+import nodeSvg from "assets/images/node.svg";
+import { MotionDiv } from "./MotionDiv";
 
 interface TextContentProps {
   children: React.ReactNode;
@@ -13,21 +18,31 @@ interface OpacityBlockProps {
   blockNumber: number;
 }
 
+interface ImgListProps {
+  src: string;
+  alt: string;
+}
+
 const opacityBlock = ({ progress, blockNumber }: OpacityBlockProps) => {
   const currProgress = progress - blockNumber;
   if (currProgress >= 0 && currProgress < 1) return 1;
-  return 0.2;
+  return 0.1;
 };
 
 const TextContent = ({ children, progress, blockNumber }: TextContentProps) => (
   <Heading
     as="h2"
     size="2xl"
+    lineHeight={1.1}
     transition="opacity 0.3s ease-in-out"
     opacity={opacityBlock({ progress, blockNumber })}
   >
     {children}
   </Heading>
+);
+
+const ImgList = ({ src, alt }: ImgListProps) => (
+  <Image maxW="72px" maxH="72px" src={src} alt={alt} borderRadius="md" />
 );
 
 export const Skills = () => {
@@ -51,24 +66,38 @@ export const Skills = () => {
 
   return (
     <Box ref={refContainer}>
-      <Flex
-        py={40}
-        alignItems="center"
-        flexDirection="column"
-        justifyContent="center"
-      >
-        <Box letterSpacing="-0.12rem">
-          <TextContent progress={progress} blockNumber={0}>
-            I have a strong background in front-end development.
-          </TextContent>
-          <TextContent progress={progress} blockNumber={1}>
-            These are some of the thechnologies and tools I use 👇
-          </TextContent>
-          <TextContent progress={progress} blockNumber={2}>
-            JavaScript, TypeScript, React, Node, Git, HTML and CSS.
-          </TextContent>
-        </Box>
-      </Flex>
+      <MotionDiv>
+        <Flex
+          mb={40}
+          alignItems="center"
+          flexDirection="column"
+          justifyContent="center"
+        >
+          <Box letterSpacing="-0.12rem">
+            <TextContent progress={progress} blockNumber={0}>
+              I have a strong background in front-end development.
+            </TextContent>
+            <TextContent progress={progress} blockNumber={1}>
+              Further info? take a look at my resume.👀
+              These are some of the thechnologies I use.
+            </TextContent>
+            <Box
+              transition="opacity 0.3s ease-in-out"
+              opacity={opacityBlock({ progress, blockNumber: 2 })}
+            >
+              <Heading as="h2" size={"2xl"} mb={6}>
+                JavaScript, TypeScript, React, Node.
+              </Heading>
+              <Stack spacing={6} direction="row">
+                <ImgList src={jsSvg} alt="JavaScript" />
+                <ImgList src={tsSvg} alt="TypeScript" />
+                <ImgList src={reactSvg} alt="React" />
+                <ImgList src={nodeSvg} alt="Node" />
+              </Stack>
+            </Box>
+          </Box>
+        </Flex>
+      </MotionDiv>
     </Box>
   );
 };

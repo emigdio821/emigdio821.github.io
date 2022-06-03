@@ -1,7 +1,9 @@
 import { BiCoffee } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import { Box, Flex, Button, } from "@chakra-ui/react";
+import { Box, Flex, Button, useColorModeValue } from "@chakra-ui/react";
+import { TextColorModeVal } from "utils/ColorModeVal";
+import styles from "assets/css/common.module.css";
 
 export const Navbar = () => {
   return (
@@ -15,42 +17,46 @@ export const Navbar = () => {
         css={{
           backdropFilter: "blur(10px)",
         }}
-        bg="rgba(33, 33, 33, 0.9)"
+        bg={useColorModeValue(
+          "rgba(255, 255, 255, 0.9)",
+          "rgba(33, 33, 33, 0.9)"
+        )}
       >
         <Flex
           h={16}
           maxW="4xl"
-          m={[0, "auto"]}
-          alignItems={"center"}
-          justifyContent={"space-between"}
+          m="0 auto"
+          alignItems="center"
+          justifyContent="space-between"
         >
           <Box>
-            <Flex alignItems={"center"}>
-              <NavLink to="/">
-                <Button
-                  size="lg"
-                  variant="link"
-                  leftIcon={<BiCoffee />}
-                  _hover={{
-                    transform: "translateY(-2px)",
-                    background: "transparent",
-                  }}
-                  color="white"
-                  _active={{ transform: "translateY(0)" }}
-                >
-                  Emigdio<b>Torres</b>
-                </Button>
-              </NavLink>
+            <Flex alignItems="center">
+              <Button
+                to="/"
+                as={NavLink}
+                variant="link"
+                fontSize="1.3rem"
+                fontWeight={700}
+                leftIcon={<BiCoffee className={styles["coffe-anim"]} />}
+                _hover={{
+                  transform: "translateY(-2px)",
+                  background: "transparent",
+                }}
+                color={TextColorModeVal()}
+                _active={{ transform: "translateY(0)" }}
+              >
+                Em<span style={{ fontWeight: 800 }}>.</span>
+              </Button>
             </Flex>
           </Box>
-          <Flex alignItems={"center"}>
+          <Flex alignItems="center">
             <Button
-              size="sm"
               to="/resume"
               as={NavLink}
               bg="#ECF5FB"
               color="#333"
               variant="solid"
+              borderRadius="full"
               _hover={{
                 bg: "#D7EAF7",
                 transform: "translateY(-2px)",
