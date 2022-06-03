@@ -1,25 +1,23 @@
-import { Heading } from "@chakra-ui/react";
-import { Paragraph } from "./Paragraph";
-import { SemiBoldText } from "./SemiBoldText";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 
 export const Hobbies = () => {
   return (
-    <>
-      <Heading as="h2" size={"2xl"} mb={4}>
-        I ♥
-      </Heading>
-      <Paragraph>
-        I enjoy listening to <SemiBoldText>Music</SemiBoldText>
-        {". "}
-        When I have some free time I like to play{" "}
-        <SemiBoldText>Videogames</SemiBoldText>
-        {" or "}
-        play the <SemiBoldText>Drums</SemiBoldText>
-        {". "}I love to build <SemiBoldText>Custom PC&lsquo;s</SemiBoldText> and{" "}
-        <SemiBoldText>Custom Keyboards</SemiBoldText>
-        {". "}I am also passionate about new{" "}
-        <SemiBoldText>Technology</SemiBoldText> topics.
-      </Paragraph>
-    </>
+    <Flex
+      pb={40}
+      alignItems="center"
+      flexDirection="column"
+      justifyContent="center"
+    >
+      <Box>
+        <Box letterSpacing="-0.12rem">
+          <Heading as="h2" size="2xl">
+            I enjoy listening to Music. When I have some free time I like to
+            play Videogames or play the Drums. I like to build Custom PC&lsquo;s
+            and Custom Keyboards. I am also passionate about new Technology
+            topics.
+          </Heading>
+        </Box>
+      </Box>
+    </Flex>
   );
 };

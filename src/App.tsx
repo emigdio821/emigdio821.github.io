@@ -5,18 +5,21 @@ import theme from "./lib/theme";
 import { AppdRoutes } from "./components/AppRoutes";
 import { Footer } from "./components/Footer";
 // import { Fonts } from "components/Fonts";
+import { ScrollObserver } from "context/ScrollObserver";
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      {/* <Fonts /> */}
-      <ChakraProvider theme={theme}>
-        <Navbar />
-        <Box minH="calc(100vh - 140px)">
-          <AppdRoutes />
-        </Box>
-        <Footer />
-      </ChakraProvider>
-    </BrowserRouter>
+    <ScrollObserver>
+      <BrowserRouter>
+        {/* <Fonts /> */}
+        <ChakraProvider theme={theme}>
+          <Navbar />
+          <Box minH="calc(100vh - 140px)">
+            <AppdRoutes />
+          </Box>
+          <Footer />
+        </ChakraProvider>
+      </BrowserRouter>
+    </ScrollObserver>
   );
 };

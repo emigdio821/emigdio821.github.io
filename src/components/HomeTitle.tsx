@@ -1,11 +1,11 @@
-import { Box, Flex, Text, Stack, VStack, Heading } from "@chakra-ui/react";
+import { Box, Flex, Stack, VStack, Heading } from "@chakra-ui/react";
 import titleBg from "assets/images/title-bg.svg";
 import styles from "assets/css/common.module.css";
 import { EmAvatar } from "./EmAvatar";
 
 export const HomeTitle = () => {
   return (
-    <Flex pt={20} pb={40} backgroundImage={titleBg}>
+    <Flex pt={20} pb={20} backgroundImage={titleBg} minH="100vh">
       <VStack px={4} w={"100%"} justify={"center"}>
         <Stack
           mb={20}
@@ -14,23 +14,22 @@ export const HomeTitle = () => {
           align={{ base: "left", md: "center" }}
           direction={{ base: "column-reverse", md: "row" }}
         >
-          <Box mr={{ base: "inherit", md: 5 }} color={"white"}>
-            <Heading as="h2" size="2xl">
+          <Box mr={{ base: "inherit", lg: 2 }} color={"white"}>
+            <Heading as="h2" size="3xl">
               Emigdio Torres
               <span className={styles["text-blinking"]}>|</span>
             </Heading>
-            <Heading fontWeight={600} size="lg">
+            <Heading fontWeight={600} size="xl">
               Software Engineer
             </Heading>
           </Box>
           <EmAvatar />
         </Stack>
         <Box maxW={"4xl"}>
-          <Text color="white" fontSize="2xl">
-            Hi there!👋, I am a Telematics Engineer with experience in Software
-            Engineering using current programming standards. I have no problem
-            to adapt in new environments and technologies.
-          </Text>
+          <Heading as="h2" size={{ base: "xl" }} color="white">
+            Hi there!✌️, I am a Telematics Engineer with experience in Software
+            Engineering.
+          </Heading>
         </Box>
       </VStack>
     </Flex>
