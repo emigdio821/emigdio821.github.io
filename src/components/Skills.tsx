@@ -26,7 +26,7 @@ interface ImgListProps {
 const opacityBlock = ({ progress, blockNumber }: OpacityBlockProps) => {
   const currProgress = progress - blockNumber;
   if (currProgress >= 0 && currProgress < 1) return 1;
-  return 0.1;
+  return 0.2;
 };
 
 const TextContent = ({ children, progress, blockNumber }: TextContentProps) => (
