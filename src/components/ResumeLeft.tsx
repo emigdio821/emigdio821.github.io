@@ -41,12 +41,11 @@ export const ResumeLeft = ({ pdfCallback }: ResumeLeftProps) => (
           </Text>
         </Box>
         <Button
-          as="a"
           mb={6}
           variant="outline"
+          onClick={pdfCallback}
           leftIcon={<FaFilePdf />}
           className={styles["download-pdf-btn"]}
-          onClick={pdfCallback}
         >
           Download
         </Button>

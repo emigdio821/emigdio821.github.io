@@ -23,6 +23,7 @@ export const BtnLink = ({
     aria-label={text}
     variant={variant}
     leftIcon={<Icon />}
+    rel="noopener noreferrer"
     color={useColorModeValue("#333", "#f0efef")}
   >
     {text}

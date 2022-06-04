@@ -44,6 +44,7 @@ export const HomeTitle = () => {
                 borderRadius="full"
                 aria-label="Github"
                 leftIcon={<FaGithub />}
+                rel="noopener noreferrer"
                 href="https://github.com/emigdio821/"
               >
                 GitHub
@@ -61,6 +62,7 @@ export const HomeTitle = () => {
                 variant="link"
                 target="_blank"
                 textUnderlineOffset={2}
+                rel="noopener noreferrer"
                 textDecoration="underline"
                 color={TextColorModeVal()}
                 href="https://www.wizeline.com/"
