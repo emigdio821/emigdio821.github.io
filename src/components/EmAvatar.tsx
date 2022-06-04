@@ -1,5 +1,6 @@
 import { Box, Image } from "@chakra-ui/react";
 import ProfileImg from "assets/images/em.jpg";
+import AltImg from "assets/images/_doge.png";
 
 interface EmAvatarProps {
   width?: number;
@@ -24,6 +25,7 @@ export const EmAvatar = ({ width = 180, height = 180 }: EmAvatarProps) => {
           fit={"cover"}
           align={"center"}
           src={ProfileImg}
+          fallbackSrc={AltImg}
         />
       </Box>
     </>
