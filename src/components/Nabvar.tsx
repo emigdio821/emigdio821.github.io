@@ -1,4 +1,4 @@
-import { BiCoffee } from "react-icons/bi";
+import { BiCoffee, BiFile } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { Box, Flex, Button, useColorModeValue } from "@chakra-ui/react";
@@ -56,6 +56,7 @@ export const Navbar = () => {
               bg="#ECF5FB"
               color="#333"
               variant="solid"
+              leftIcon={<BiFile />}
               borderRadius="full"
               _hover={{
                 bg: "#D7EAF7",
