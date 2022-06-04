@@ -14,7 +14,7 @@ export const App = () => {
         {/* <Fonts /> */}
         <ChakraProvider theme={theme}>
           <Navbar />
-          <Box minH="calc(100vh - 140px)">
+          <Box minH="calc(100vh - 150px)">
             <AppdRoutes />
           </Box>
           <Footer />
