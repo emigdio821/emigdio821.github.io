@@ -68,7 +68,7 @@ export const Skills = () => {
     <Box ref={refContainer}>
       <MotionDiv>
         <Flex
-          mb={40}
+          mb={{ base: 20, lg: 40 }}
           alignItems="center"
           flexDirection="column"
           justifyContent="center"
@@ -88,7 +88,7 @@ export const Skills = () => {
               <Heading as="h2" size={"2xl"} mb={6}>
                 JavaScript, TypeScript, React, Node.
               </Heading>
-              <Stack spacing={6} direction="row">
+              <Stack spacing={{ base: 2, sm: 6 }} direction="row">
                 <ImgList src={jsSvg} alt="JavaScript" />
                 <ImgList src={tsSvg} alt="TypeScript" />
                 <ImgList src={reactSvg} alt="React" />

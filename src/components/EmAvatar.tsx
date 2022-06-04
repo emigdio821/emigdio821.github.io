@@ -18,13 +18,12 @@ export const EmAvatar = ({ width = 180, height = 180 }: EmAvatarProps) => {
         position={"relative"}
       >
         <Image
-          alt={"Hero Image"}
-          fit={"cover"}
-          align={"center"}
           w={"100%"}
           h={"100%"}
+          alt={"Em"}
+          fit={"cover"}
+          align={"center"}
           src={ProfileImg}
-          fallbackSrc={`https://via.placeholder.com/${width}/333/fafafa?text=ET`}
         />
       </Box>
     </>

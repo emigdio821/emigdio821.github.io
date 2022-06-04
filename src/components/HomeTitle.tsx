@@ -18,9 +18,9 @@ import styles from "assets/css/common.module.css";
 export const HomeTitle = () => {
   const titleBg = useColorModeValue(bgDark, bgLight);
   return (
-    <Flex pt={20} pb={20} mb={40} backgroundImage={titleBg} minH="100vh">
+    <Flex pt={20} pb={20} mb={{ base: 20, md: 40 }} backgroundImage={titleBg} minH="100vh">
       <VStack px={4} w={"100%"} justify={"center"}>
-        <MotionDiv y={-50}>
+        <MotionDiv y={-10}>
           <Stack
             mb={20}
             w="100%"

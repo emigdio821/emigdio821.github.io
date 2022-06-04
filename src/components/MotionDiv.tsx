@@ -1,6 +1,4 @@
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { motion, Variants } from "framer-motion";
 
 interface MotionDivProps {
   children: React.ReactNode;
@@ -8,28 +6,37 @@ interface MotionDivProps {
   y?: number;
 }
 
-export const MotionDiv = ({ children, delay = 0, y = 100 }: MotionDivProps) => {
-  const frameVariants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 1, y },
+export const MotionDiv = ({ children, delay = 0, y = 20 }: MotionDivProps) => {
+  const variants: Variants = {
+    offscreen: {
+      y,
+      opacity: 0,
+      scale: 1.01,
+      transition: {
+        type: "spring",
+        bounce: 0.6,
+        duration: 1,
+      },
+    },
+    onscreen: {
+      y: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "tween",
+        // bounce: 0.4,
+        // duration: 1,
+      },
+    },
   };
-
-  const animation = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start("visible");
-    }
-  }, [animation, inView]);
 
   return (
     <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={animation}
-      variants={frameVariants}
+      initial="offscreen"
+      variants={variants}
+      whileInView="onscreen"
       transition={{ delay }}
+      viewport={{ once: true, amount: 0.4 }}
     >
       {children}
     </motion.div>

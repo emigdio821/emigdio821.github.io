@@ -29,7 +29,7 @@ export const ResumeLeft = ({ pdfCallback }: ResumeLeftProps) => (
   <>
     <Box p={4} bg={useColorModeValue("#f0efef", "#181616")}>
       <Box mb={6}>
-        <MotionDiv y={-50}>
+        <MotionDiv y={-10}>
           <EmAvatar width={120} height={120} />
         </MotionDiv>
         <Box flexGrow={1} mb={6} mt={4}>

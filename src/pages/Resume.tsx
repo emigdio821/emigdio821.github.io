@@ -14,7 +14,11 @@ export const Resume = () => {
 
   return (
     <>
-      <Container pt={20} maxW="4xl" px={{ base: 4, md: 0 }}>
+      <Container
+        maxW="4xl"
+        px={{ base: 0, md: 0 }}
+        pt={{ base: "64px", md: 20 }}
+      >
         <Box ref={pdfRef}>
           <Grid
             className={styles["main-grid"]}

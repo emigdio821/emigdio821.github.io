@@ -5,7 +5,8 @@ export const Hobbies = () => {
   return (
     <MotionDiv>
       <Flex
-        pb={40}
+        pb={{ base: 0, md: 40 }}
+        mt={{ base: 20, md: 40 }}
         alignItems="center"
         flexDirection="column"
         justifyContent="center"
