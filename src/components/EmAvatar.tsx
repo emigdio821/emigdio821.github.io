@@ -1,6 +1,5 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Spinner, VStack } from "@chakra-ui/react";
 import ProfileImg from "assets/images/em.jpg";
-import AltImg from "assets/images/_doge.png";
 
 interface EmAvatarProps {
   width?: number;
@@ -25,7 +24,21 @@ export const EmAvatar = ({ width = 180, height = 180 }: EmAvatarProps) => {
           fit={"cover"}
           align={"center"}
           src={ProfileImg}
-          fallbackSrc={AltImg}
+          fallback={
+            <VStack
+              w={"100%"}
+              h={"100%"}
+              bg={"#333"}
+              justify={"center"}
+            >
+              <Spinner
+                size="md"
+                speed="0.6s"
+                color="#B2ABCC"
+                thickness="4px"
+              />
+            </VStack>
+          }
         />
       </Box>
     </>
