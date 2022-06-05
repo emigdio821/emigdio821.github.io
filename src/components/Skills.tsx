@@ -1,17 +1,17 @@
 import { useContext, useRef } from "react";
-import { Heading, Box, Flex, Image, Stack } from "@chakra-ui/react";
+import {
+  Heading,
+  Box,
+  Image,
+  Stack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { ScrollContext } from "context/ScrollObserver";
 import jsSvg from "assets/images/js.svg";
 import tsSvg from "assets/images/ts.svg";
 import reactSvg from "assets/images/react.svg";
 import nodeSvg from "assets/images/node.svg";
 import MotionDiv from "./MotionDiv";
-
-interface TextContentProps {
-  children: React.ReactNode;
-  progress: number;
-  blockNumber: number;
-}
 
 interface OpacityBlockProps {
   progress: number;
@@ -29,30 +29,16 @@ const opacityBlock = ({ progress, blockNumber }: OpacityBlockProps) => {
   return 0.2;
 };
 
-function TextContent({ children, progress, blockNumber }: TextContentProps) {
-  return (
-    <Heading
-      as="h2"
-      size="2xl"
-      lineHeight={1.1}
-      transition="opacity 0.3s ease-in-out"
-      opacity={opacityBlock({ progress, blockNumber })}
-    >
-      {children}
-    </Heading>
-  );
-}
-
 function ImgList({ src, alt }: ImgListProps) {
   return (
-    <Image maxW="72px" maxH="72px" src={src} alt={alt} borderRadius="md" />
+    <Image maxW="60px" maxH="60px" src={src} alt={alt} borderRadius="md" />
   );
 }
 
 export default function Skills() {
   const { scrollY } = useContext(ScrollContext);
   const refContainer = useRef<HTMLDivElement>(null);
-  const numOfPages = 3;
+  const numOfPages = 2;
   let progress = 0;
   const { current: elContainer } = refContainer;
 
@@ -69,38 +55,44 @@ export default function Skills() {
   }
 
   return (
-    <Box ref={refContainer}>
+    <Box
+      borderRadius="xl"
+      ref={refContainer}
+      p={{ base: 4, md: 10 }}
+      mb={{ base: 4, md: 20 }}
+      bg={useColorModeValue("#fafafa", "#2e2e2e")}
+    >
       <MotionDiv>
-        <Flex
-          mb={{ base: 20, lg: 40 }}
-          alignItems="center"
-          flexDirection="column"
-          justifyContent="center"
-        >
-          <Box letterSpacing="-0.12rem">
-            <TextContent progress={progress} blockNumber={0}>
+        <Box>
+          <Box
+            transition="opacity 0.3s ease-in-out"
+            opacity={opacityBlock({ progress, blockNumber: 0 })}
+          >
+            <Heading as="h2" size={{ base: "lg" }}>
               I have a strong background in front-end development.
-            </TextContent>
-            <TextContent progress={progress} blockNumber={1}>
-              Further info? take a look at my resume.👀 These are some of the
-              thechnologies I use.
-            </TextContent>
-            <Box
-              transition="opacity 0.3s ease-in-out"
-              opacity={opacityBlock({ progress, blockNumber: 2 })}
-            >
-              <Heading as="h2" size="2xl" mb={6}>
-                JavaScript, TypeScript, React, Node.
-              </Heading>
-              <Stack spacing={{ base: 2, sm: 6 }} direction="row">
-                <ImgList src={jsSvg} alt="JavaScript" />
-                <ImgList src={tsSvg} alt="TypeScript" />
-                <ImgList src={reactSvg} alt="React" />
-                <ImgList src={nodeSvg} alt="Node" />
-              </Stack>
-            </Box>
+            </Heading>
+            <Heading as="h2" size={{ base: "lg" }}>
+              Further info? take a look at my resume.👀
+            </Heading>
           </Box>
-        </Flex>
+          <Box
+            transition="opacity 0.3s ease-in-out"
+            opacity={opacityBlock({ progress, blockNumber: 1 })}
+          >
+            <Heading as="h2" size={{ base: "lg" }}>
+              These are some of the thechnologies I use.
+            </Heading>
+            <Heading as="h2" size={{ base: "lg" }} mb={6}>
+              JavaScript, TypeScript, React, Node.
+            </Heading>
+            <Stack spacing={{ base: 2, sm: 6 }} direction="row">
+              <ImgList src={jsSvg} alt="JavaScript" />
+              <ImgList src={tsSvg} alt="TypeScript" />
+              <ImgList src={reactSvg} alt="React" />
+              <ImgList src={nodeSvg} alt="Node" />
+            </Stack>
+          </Box>
+        </Box>
       </MotionDiv>
     </Box>
   );

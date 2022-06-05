@@ -5,13 +5,11 @@ import Navbar from "components/Nabvar";
 import theme from "lib/theme";
 import AppdRoutes from "components/AppRoutes";
 import Footer from "components/Footer";
-// import { Fonts } from "components/Fonts";
 
 export default function App() {
   return (
     <ScrollObserver>
       <BrowserRouter>
-        {/* <Fonts /> */}
         <ChakraProvider theme={theme}>
           <Navbar />
           <Box minH="calc(100vh - 150px)">

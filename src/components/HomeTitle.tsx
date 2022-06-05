@@ -21,9 +21,9 @@ export default function HomeTitle() {
     <Flex
       pt={20}
       pb={20}
-      mb={{ base: 20, md: 40 }}
-      backgroundImage={titleBg}
       minH="100vh"
+      mb={{ base: 4, md: 40 }}
+      backgroundImage={titleBg}
     >
       <VStack px={4} w="100%" justify="center">
         <MotionDiv y={-10}>

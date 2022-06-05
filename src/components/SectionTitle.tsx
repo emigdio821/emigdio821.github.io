@@ -7,13 +7,7 @@ interface SectionTitleProps {
 
 export default function SectionTitle({ children }: SectionTitleProps) {
   return (
-    <Heading
-      mb={3}
-      as="h4"
-      size="md"
-      letterSpacing={1}
-      color={TextColorModeVal()}
-    >
+    <Heading mb={3} as="h4" size="md" color={TextColorModeVal()}>
       {children}
     </Heading>
   );
