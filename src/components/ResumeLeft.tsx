@@ -13,27 +13,27 @@ import {
   FaLinkedinIn,
   FaMapMarkedAlt,
 } from "react-icons/fa";
-import { BtnLink } from "./BtnLink";
-import { EmAvatar } from "./EmAvatar";
-import { MotionDiv } from "./MotionDiv";
-import { SemiBoldText } from "./SemiBoldText";
-import { SectionTitle } from "./SectionTitle";
-import { TextColorModeVal } from "utils/ColorModeVal";
+import TextColorModeVal from "utils/TextColorModeVal";
 import styles from "assets/css/common.module.css";
+import BtnLink from "./BtnLink";
+import EmAvatar from "./EmAvatar";
+import MotionDiv from "./MotionDiv";
+import SemiBoldText from "./SemiBoldText";
+import SectionTitle from "./SectionTitle";
 
 interface ResumeLeftProps {
   pdfCallback: () => void;
 }
 
-export const ResumeLeft = ({ pdfCallback }: ResumeLeftProps) => (
-  <>
+export default function ResumeLeft({ pdfCallback }: ResumeLeftProps) {
+  return (
     <Box p={4} bg={useColorModeValue("#f0efef", "#181616")}>
       <Box mb={6}>
         <MotionDiv y={-10}>
           <EmAvatar width={120} height={120} />
         </MotionDiv>
         <Box flexGrow={1} mb={6} mt={4}>
-          <Heading as="h3" size={"lg"} color={TextColorModeVal()}>
+          <Heading as="h3" size="lg" color={TextColorModeVal()}>
             Emigdio Torres
           </Heading>
           <Text fontSize="lg" color={TextColorModeVal()}>
@@ -109,12 +109,7 @@ export const ResumeLeft = ({ pdfCallback }: ResumeLeftProps) => (
       </Box>
       <Box>
         <SectionTitle>Education</SectionTitle>
-        <Heading
-          as="h5"
-          size={"sm"}
-          fontWeight={600}
-          color={TextColorModeVal()}
-        >
+        <Heading as="h5" size="sm" fontWeight={600} color={TextColorModeVal()}>
           Telematics Engineer
         </Heading>
         <Box color={TextColorModeVal()}>
@@ -124,5 +119,5 @@ export const ResumeLeft = ({ pdfCallback }: ResumeLeftProps) => (
         </Box>
       </Box>
     </Box>
-  </>
-);
+  );
+}

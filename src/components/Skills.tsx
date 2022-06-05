@@ -5,7 +5,7 @@ import jsSvg from "assets/images/js.svg";
 import tsSvg from "assets/images/ts.svg";
 import reactSvg from "assets/images/react.svg";
 import nodeSvg from "assets/images/node.svg";
-import { MotionDiv } from "./MotionDiv";
+import MotionDiv from "./MotionDiv";
 
 interface TextContentProps {
   children: React.ReactNode;
@@ -29,23 +29,27 @@ const opacityBlock = ({ progress, blockNumber }: OpacityBlockProps) => {
   return 0.2;
 };
 
-const TextContent = ({ children, progress, blockNumber }: TextContentProps) => (
-  <Heading
-    as="h2"
-    size="2xl"
-    lineHeight={1.1}
-    transition="opacity 0.3s ease-in-out"
-    opacity={opacityBlock({ progress, blockNumber })}
-  >
-    {children}
-  </Heading>
-);
+function TextContent({ children, progress, blockNumber }: TextContentProps) {
+  return (
+    <Heading
+      as="h2"
+      size="2xl"
+      lineHeight={1.1}
+      transition="opacity 0.3s ease-in-out"
+      opacity={opacityBlock({ progress, blockNumber })}
+    >
+      {children}
+    </Heading>
+  );
+}
 
-const ImgList = ({ src, alt }: ImgListProps) => (
-  <Image maxW="72px" maxH="72px" src={src} alt={alt} borderRadius="md" />
-);
+function ImgList({ src, alt }: ImgListProps) {
+  return (
+    <Image maxW="72px" maxH="72px" src={src} alt={alt} borderRadius="md" />
+  );
+}
 
-export const Skills = () => {
+export default function Skills() {
   const { scrollY } = useContext(ScrollContext);
   const refContainer = useRef<HTMLDivElement>(null);
   const numOfPages = 3;
@@ -59,7 +63,7 @@ export const Skills = () => {
     const percentY =
       Math.min(
         clientHeight + halfH,
-        Math.max(-screenH, scrollY - offsetTop) + halfH
+        Math.max(-screenH, scrollY - offsetTop) + halfH,
       ) / clientHeight;
     progress = Math.min(numOfPages - 0.5, Math.max(0.5, percentY * numOfPages));
   }
@@ -78,14 +82,14 @@ export const Skills = () => {
               I have a strong background in front-end development.
             </TextContent>
             <TextContent progress={progress} blockNumber={1}>
-              Further info? take a look at my resume.👀
-              These are some of the thechnologies I use.
+              Further info? take a look at my resume.👀 These are some of the
+              thechnologies I use.
             </TextContent>
             <Box
               transition="opacity 0.3s ease-in-out"
               opacity={opacityBlock({ progress, blockNumber: 2 })}
             >
-              <Heading as="h2" size={"2xl"} mb={6}>
+              <Heading as="h2" size="2xl" mb={6}>
                 JavaScript, TypeScript, React, Node.
               </Heading>
               <Stack spacing={{ base: 2, sm: 6 }} direction="row">
@@ -100,4 +104,4 @@ export const Skills = () => {
       </MotionDiv>
     </Box>
   );
-};
+}

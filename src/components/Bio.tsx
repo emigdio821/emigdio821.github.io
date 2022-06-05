@@ -1,26 +1,30 @@
 import { Box, Heading, chakra, Stack } from "@chakra-ui/react";
-import { SemiBoldText } from './SemiBoldText';
+import SemiBoldText from "./SemiBoldText";
 
 interface CmpChildrenProps {
   children: React.ReactNode;
 }
 
-export const Bio = () => {
-  const BioSection = ({ children }: CmpChildrenProps) => (
+function BioSection({ children }: CmpChildrenProps) {
+  return (
     <Box fontSize="2xl">
       <Stack direction="row">{children}</Stack>
     </Box>
   );
+}
 
-  const BioYear = ({ children }: CmpChildrenProps) => (
+function BioYear({ children }: CmpChildrenProps) {
+  return (
     <chakra.span mr={6}>
       <chakra.span fontWeight={700}>{children}</chakra.span>
     </chakra.span>
   );
+}
 
+export default function Bio() {
   return (
     <Box mb={10}>
-      <Heading as="h2" size={"2xl"} mb={4}>
+      <Heading as="h2" size="2xl" mb={4}>
         Bio
       </Heading>
       <BioSection>
@@ -32,8 +36,8 @@ export const Bio = () => {
       <BioSection>
         <BioYear>2014</BioYear>
         <chakra.span>
-          <SemiBoldText>Telematics Engineering</SemiBoldText> Bachelor's Degree,{" "}
-          <SemiBoldText>University of Colima</SemiBoldText>.
+          <SemiBoldText>Telematics Engineering</SemiBoldText> Bachelor&prime;s
+          Degree, <SemiBoldText>University of Colima</SemiBoldText>.
         </chakra.span>
       </BioSection>
       <BioSection>
@@ -62,4 +66,4 @@ export const Bio = () => {
       </BioSection>
     </Box>
   );
-};
+}

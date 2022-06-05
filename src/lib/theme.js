@@ -1,11 +1,12 @@
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
-import { TextColorModeVal } from "utils/ColorModeVal";
+// import TextColorModeVal from "../utils/TextColorModeVal";
+import TextColorModeVal from "../utils/TextColorModeVal";
 
 const styles = {
   global: (props) => ({
     body: {
-      color: TextColorModeVal(),
+      color: TextColorModeVal,
       bg: mode("inherit", "#333")(props),
     },
   }),

@@ -6,7 +6,11 @@ interface MotionDivProps {
   y?: number;
 }
 
-export const MotionDiv = ({ children, delay = 0, y = 20 }: MotionDivProps) => {
+export default function MotionDiv({
+  children,
+  delay = 0,
+  y = 20,
+}: MotionDivProps) {
   const variants: Variants = {
     offscreen: {
       y,
@@ -41,4 +45,4 @@ export const MotionDiv = ({ children, delay = 0, y = 20 }: MotionDivProps) => {
       {children}
     </motion.div>
   );
-};
+}

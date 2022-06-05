@@ -1,4 +1,6 @@
-import { NotFound, Home, Resume } from "pages";
+import NotFound from "pages/NotFound";
+import Home from "pages/Home";
+import Resume from "pages/Resume";
 
 interface Route {
   to: string;
@@ -7,7 +9,7 @@ interface Route {
   name: string;
 }
 
-export const routes: Route[] = [
+const routes: Route[] = [
   {
     to: "/not-found",
     path: "not-found",
@@ -27,3 +29,5 @@ export const routes: Route[] = [
     name: "Resume",
   },
 ];
+
+export default routes;

@@ -1,7 +1,5 @@
-import { EmAvatar } from "./EmAvatar";
 import bgLight from "assets/images/title-bg.svg";
 import bgDark from "assets/images/title-bg-light.svg";
-import { MotionDiv } from "./MotionDiv";
 import {
   Box,
   Flex,
@@ -12,14 +10,22 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
-import { TextColorModeVal } from "utils/ColorModeVal";
+import TextColorModeVal from "utils/TextColorModeVal";
 import styles from "assets/css/common.module.css";
+import MotionDiv from "./MotionDiv";
+import EmAvatar from "./EmAvatar";
 
-export const HomeTitle = () => {
+export default function HomeTitle() {
   const titleBg = useColorModeValue(bgDark, bgLight);
   return (
-    <Flex pt={20} pb={20} mb={{ base: 20, md: 40 }} backgroundImage={titleBg} minH="100vh">
-      <VStack px={4} w={"100%"} justify={"center"}>
+    <Flex
+      pt={20}
+      pb={20}
+      mb={{ base: 20, md: 40 }}
+      backgroundImage={titleBg}
+      minH="100vh"
+    >
+      <VStack px={4} w="100%" justify="center">
         <MotionDiv y={-10}>
           <Stack
             mb={20}
@@ -52,10 +58,10 @@ export const HomeTitle = () => {
             </Box>
             <EmAvatar />
           </Stack>
-          <Box maxW={"4xl"}>
+          <Box maxW="4xl">
             <Heading as="h2" size={{ base: "lg" }}>
-              Hi there, I&prime;m a Software Engineer, mainly focused on front-end
-              development. Currently, I&prime;m contributing to{" "}
+              Hi there, I&prime;m a Software Engineer, mainly focused on
+              front-end development. Currently, I&prime;m contributing to{" "}
               <Button
                 as="a"
                 fontSize="lg"
@@ -78,4 +84,4 @@ export const HomeTitle = () => {
       </VStack>
     </Flex>
   );
-};
+}

@@ -1,4 +1,10 @@
-import { FC, createContext, useCallback, useEffect, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useEffect,
+  useState,
+  useMemo,
+} from "react";
 
 interface ScrollValue {
   scrollY: number;
@@ -10,8 +16,15 @@ interface ScrollObserverProps {
 
 export const ScrollContext = createContext<ScrollValue>({ scrollY: 0 });
 
-export const ScrollObserver: FC<ScrollObserverProps> = ({ children }) => {
+export function ScrollObserver({ children }: ScrollObserverProps) {
   const [scrollY, setScrollY] = useState(0);
+  const scrollYMem = useMemo(
+    () => ({
+      scrollY,
+    }),
+    [scrollY],
+  );
+
   const handleScroll = useCallback(() => {
     setScrollY(window.scrollY);
   }, []);
@@ -25,8 +38,8 @@ export const ScrollObserver: FC<ScrollObserverProps> = ({ children }) => {
   }, [handleScroll]);
 
   return (
-    <ScrollContext.Provider value={{ scrollY }}>
+    <ScrollContext.Provider value={scrollYMem}>
       {children}
     </ScrollContext.Provider>
   );
-};
+}

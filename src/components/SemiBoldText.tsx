@@ -2,6 +2,6 @@ interface SemiBoldTextProps {
   children: React.ReactNode;
 }
 
-export const SemiBoldText = ({ children }: SemiBoldTextProps) => (
-  <span style={{ fontWeight: 600 }}>{children}</span>
-);
+export default function SemiBoldText({ children }: SemiBoldTextProps) {
+  return <span style={{ fontWeight: 600 }}>{children}</span>;
+}

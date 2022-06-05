@@ -6,41 +6,29 @@ interface EmAvatarProps {
   height?: number;
 }
 
-export const EmAvatar = ({ width = 180, height = 180 }: EmAvatarProps) => {
+export default function EmAvatar({ width = 180, height = 180 }: EmAvatarProps) {
   return (
-    <>
-      <Box
-        width={width}
-        height={height}
-        rounded={"full"}
-        boxShadow={"2xl"}
-        overflow={"hidden"}
-        position={"relative"}
-      >
-        <Image
-          w={"100%"}
-          h={"100%"}
-          alt={"Em"}
-          fit={"cover"}
-          align={"center"}
-          src={ProfileImg}
-          fallback={
-            <VStack
-              w={"100%"}
-              h={"100%"}
-              bg={"#333"}
-              justify={"center"}
-            >
-              <Spinner
-                size="md"
-                speed="0.6s"
-                color="#B2ABCC"
-                thickness="4px"
-              />
-            </VStack>
-          }
-        />
-      </Box>
-    </>
+    <Box
+      width={width}
+      height={height}
+      rounded="full"
+      boxShadow="2xl"
+      overflow="hidden"
+      position="relative"
+    >
+      <Image
+        w="100%"
+        h="100%"
+        alt="Em"
+        fit="cover"
+        align="center"
+        src={ProfileImg}
+        fallback={
+          <VStack w="100%" h="100%" bg="#333" justify="center">
+            <Spinner size="md" speed="0.6s" color="#B2ABCC" thickness="4px" />
+          </VStack>
+        }
+      />
+    </Box>
   );
-};
+}

@@ -1,16 +1,8 @@
-import * as React from "react";
-import {
-  useColorMode,
-  useColorModeValue,
-  IconButton,
-  IconButtonProps,
-} from "@chakra-ui/react";
+import { useColorMode, useColorModeValue, IconButton } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 
-type ThemeSwitcherProps = Omit<IconButtonProps, "aria-label">;
-
-export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = (props) => {
+export default function ThemeSwitcher() {
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(MoonIcon, SunIcon);
@@ -36,8 +28,7 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = (props) => {
           transform: "translateY(-2px)",
         }}
         _active={{ transform: "translateY(0)" }}
-        {...props}
       />
     </motion.div>
   );
-};
+}
