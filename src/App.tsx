@@ -12,7 +12,9 @@ export default function App() {
       <BrowserRouter>
         <ChakraProvider theme={theme}>
           <Navbar />
-          <Box minH="calc(100vh - 150px)">
+          <Box
+            minH={{ base: "calc(100vh - 222px)", sm: "calc(100vh - 150px)" }}
+          >
             <AppdRoutes />
           </Box>
           <Footer />

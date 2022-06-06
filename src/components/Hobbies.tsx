@@ -7,7 +7,7 @@ export default function Hobbies() {
       borderRadius="xl"
       p={{ base: 4, md: 10 }}
       mt={{ base: 4, md: 20 }}
-      mb={{ base: 4, md: 40 }}
+      mb={{ base: 4, md: 20 }}
       bg={useColorModeValue("#fafafa", "#2e2e2e")}
     >
       <MotionDiv>
