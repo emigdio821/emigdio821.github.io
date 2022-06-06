@@ -12,8 +12,8 @@ import {
 import { FaGithub } from "react-icons/fa";
 import TextColorModeVal from "utils/TextColorModeVal";
 import styles from "assets/css/common.module.css";
-import MotionDiv from "./MotionDiv";
 import EmAvatar from "./EmAvatar";
+import MotionDiv from "./MotionDiv";
 
 export default function HomeTitle() {
   const titleBg = useColorModeValue(bgDark, bgLight);

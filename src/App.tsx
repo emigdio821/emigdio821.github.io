@@ -1,11 +1,10 @@
-import { Box, ChakraProvider } from "@chakra-ui/react";
+import theme from "lib/theme";
+import Navbar from "components/Nabvar";
+import Footer from "components/Footer";
+import AppdRoutes from "components/AppRoutes";
 import { BrowserRouter } from "react-router-dom";
 import { ScrollObserver } from "context/ScrollObserver";
-import Navbar from "components/Nabvar";
-import theme from "lib/theme";
-import AppdRoutes from "components/AppRoutes";
-import Footer from "components/Footer";
-// import ScrollTop from "components/ScrollTop";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 
 export default function App() {
   return (
@@ -17,7 +16,6 @@ export default function App() {
             <AppdRoutes />
           </Box>
           <Footer />
-          {/* <ScrollTop /> */}
         </ChakraProvider>
       </BrowserRouter>
     </ScrollObserver>
