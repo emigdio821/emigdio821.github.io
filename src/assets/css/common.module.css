@@ -41,6 +41,7 @@
   }
 
   .main-grid {
+    border-radius: 0 !important;
     grid-template-columns: 0.5fr 1fr !important;
   }
 

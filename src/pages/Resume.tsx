@@ -1,9 +1,9 @@
 import { useRef } from "react";
-import { useReactToPrint } from "react-to-print";
-import { Box, Container, Grid } from "@chakra-ui/react";
 import ResumeLeft from "components/ResumeLeft";
+import { useReactToPrint } from "react-to-print";
 import ResumeRight from "components/ResumeRight";
 import styles from "assets/css/common.module.css";
+import { Box, Container, Grid } from "@chakra-ui/react";
 
 export default function Resume() {
   const pdfRef = useRef(null);
@@ -13,9 +13,11 @@ export default function Resume() {
   });
 
   return (
-    <Container maxW="4xl" px={{ base: 0, md: 0 }} pt={{ base: "64px", md: 20 }}>
+    <Container maxW="4xl" px={{ base: 0, md: 0 }} pt={20}>
       <Box ref={pdfRef}>
         <Grid
+          borderRadius="xl"
+          overflow="hidden"
           className={styles["main-grid"]}
           templateColumns={{ base: "inherit", md: "0.5fr 1fr" }}
         >
