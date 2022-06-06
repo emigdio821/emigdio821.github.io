@@ -10,11 +10,11 @@
 
 @keyframes blinking {
   from {
-    color: transparent;
+    opacity: 0;
   }
 
   to {
-    color: inherit;
+    opacity: 1;
   }
 }
 

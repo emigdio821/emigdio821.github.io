@@ -37,7 +37,7 @@ export default function HomeTitle() {
             <Box mr={{ base: "inherit", lg: 2 }}>
               <Heading as="h2" size="2xl">
                 Emigdio Torres
-                <span className={styles["text-blinking"]}>|</span>
+                <span className={styles["text-blinking"]}>_</span>
               </Heading>
               <Heading fontWeight={600} size="lg" mb={4}>
                 Software Engineer
