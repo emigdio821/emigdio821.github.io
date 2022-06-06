@@ -5,7 +5,7 @@ import Navbar from "components/Nabvar";
 import theme from "lib/theme";
 import AppdRoutes from "components/AppRoutes";
 import Footer from "components/Footer";
-import ScrollTop from "components/ScrollTop";
+// import ScrollTop from "components/ScrollTop";
 
 export default function App() {
   return (
@@ -17,7 +17,7 @@ export default function App() {
             <AppdRoutes />
           </Box>
           <Footer />
-          <ScrollTop />
+          {/* <ScrollTop /> */}
         </ChakraProvider>
       </BrowserRouter>
     </ScrollObserver>
