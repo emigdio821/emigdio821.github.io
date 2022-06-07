@@ -31,7 +31,7 @@ const opacityBlock = ({ progress, blockNumber }: OpacityBlockProps) => {
 
 function ImgList({ src, alt }: ImgListProps) {
   return (
-    <Image maxW="60px" maxH="60px" src={src} alt={alt} borderRadius="md" />
+    <Image maxW="50px" maxH="50px" src={src} alt={alt} borderRadius="md" />
   );
 }
 
@@ -85,7 +85,11 @@ export default function Skills() {
             <Heading as="h2" size={{ base: "lg" }} mb={6}>
               JavaScript, TypeScript, React, Node.
             </Heading>
-            <Stack spacing={{ base: 2, sm: 6 }} direction="row">
+            <Stack
+              direction="row"
+              filter="grayscale(70%);"
+              spacing={{ base: 2, sm: 6 }}
+            >
               <ImgList src={jsSvg} alt="JavaScript" />
               <ImgList src={tsSvg} alt="TypeScript" />
               <ImgList src={reactSvg} alt="React" />
