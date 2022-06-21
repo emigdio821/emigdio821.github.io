@@ -80,7 +80,7 @@ export default function Skills() {
             opacity={opacityBlock({ progress, blockNumber: 1 })}
           >
             <Heading as="h2" size={{ base: "lg" }}>
-              These are some of the thechnologies I use.
+              These are some of the thechnologies I use:
             </Heading>
             <Heading as="h2" size={{ base: "lg" }} mb={6}>
               JavaScript, TypeScript, React, Node.
