@@ -21,8 +21,8 @@ export default function BtnLink({
       size={size}
       href={href}
       target="_blank"
-      aria-label={text}
       variant={variant}
+      aria-label={text}
       leftIcon={<Icon />}
       rel="noopener noreferrer"
       color={useColorModeValue("#333", "#f0efef")}

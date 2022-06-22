@@ -10,8 +10,8 @@ export default function EmAvatar({ width = 180, height = 180 }: EmAvatarProps) {
   return (
     <Box
       width={width}
-      height={height}
       rounded="full"
+      height={height}
       boxShadow="2xl"
       overflow="hidden"
       position="relative"

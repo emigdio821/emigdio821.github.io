@@ -6,7 +6,7 @@ import styles from "assets/css/common.module.css";
 import { Box, Container, Grid } from "@chakra-ui/react";
 
 export default function Resume() {
-  const pdfRef = useRef(null);
+  const pdfRef = useRef<HTMLDivElement>(null);
   const handlePdfDownload = useReactToPrint({
     content: () => pdfRef.current,
     documentTitle: "Emigdio-Torres",
