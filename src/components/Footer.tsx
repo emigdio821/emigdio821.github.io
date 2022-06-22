@@ -30,9 +30,9 @@ export default function Footer() {
             Em<span style={{ fontWeight: 800 }}>.</span>
           </Text>
         </Flex>
-        <Text fontSize="sm" py={2} m="0 !important">
+        {/* <Text fontSize="sm" py={2} m="0 !important">
           &copy; {new Date().getFullYear()} all rights reserved.
-        </Text>
+        </Text> */}
         <ButtonGroup>
           <Button
             as="a"
