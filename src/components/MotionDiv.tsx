@@ -2,15 +2,10 @@ import { motion, Variants } from "framer-motion";
 
 interface MotionDivProps {
   children: React.ReactNode;
-  delay?: number;
   y?: number;
 }
 
-export default function MotionDiv({
-  children,
-  delay = 0,
-  y = 20,
-}: MotionDivProps) {
+export default function MotionDiv({ children, y = 50 }: MotionDivProps) {
   const variants: Variants = {
     offscreen: {
       y,
@@ -28,8 +23,6 @@ export default function MotionDiv({
       opacity: 1,
       transition: {
         type: "tween",
-        // bounce: 0.4,
-        // duration: 1,
       },
     },
   };
@@ -39,7 +32,6 @@ export default function MotionDiv({
       initial="offscreen"
       variants={variants}
       whileInView="onscreen"
-      transition={{ delay }}
       viewport={{ once: true, amount: 0.4 }}
     >
       {children}

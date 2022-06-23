@@ -113,7 +113,7 @@ export default function ResumeLeft({ pdfCallback }: ResumeLeftProps) {
           Telematics Engineer
         </Heading>
         <Box color={TextColorModeVal()}>
-          <Text fontSize="sm">Engineer&prime;s Degree</Text>
+          <Text fontSize="sm">Engineer&apos;s Degree</Text>
           <Text fontSize="sm">University of Colima</Text>
           <Text fontSize="sm">2010 - 2014</Text>
         </Box>

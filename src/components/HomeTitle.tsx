@@ -5,6 +5,7 @@ import {
   Flex,
   Stack,
   VStack,
+  chakra,
   Button,
   Heading,
   useColorModeValue,
@@ -14,6 +15,7 @@ import TextColorModeVal from "utils/TextColorModeVal";
 import styles from "assets/css/common.module.css";
 import EmAvatar from "./EmAvatar";
 import MotionDiv from "./MotionDiv";
+import CardText from "./CardText";
 
 export default function HomeTitle() {
   const titleBg = useColorModeValue(bgDark, bgLight);
@@ -23,7 +25,7 @@ export default function HomeTitle() {
       pb={20}
       minH="100vh"
       bgImage={titleBg}
-      mb={{ base: 4, md: 40 }}
+      mb={{ base: 4, md: 20 }}
       bgColor={useColorModeValue("#fafafa", "#141414")}
     >
       <VStack px={4} w="100%" justify="center">
@@ -60,9 +62,9 @@ export default function HomeTitle() {
             <EmAvatar />
           </Stack>
           <Box maxW="4xl">
-            <Heading as="h2" size={{ base: "lg" }}>
-              Hi there, I&prime;m a Software Engineer, mainly focused on
-              front-end development. Currently, I&prime;m contributing to{" "}
+            <CardText>
+              Hi there, I&apos;m a Software Engineer, mainly focused on
+              front-end development. Currently, I&apos;m contributing to{" "}
               <Button
                 as="a"
                 fontSize="lg"
@@ -74,12 +76,15 @@ export default function HomeTitle() {
                 color={TextColorModeVal()}
                 href="https://www.wizeline.com/"
               >
-                <Heading as="h2" size={{ base: "lg" }}>
+                <chakra.span
+                  fontWeight="700"
+                  fontSize={{ base: "2xl", md: "3xl" }}
+                >
                   Wizeline
-                </Heading>
+                </chakra.span>
               </Button>{" "}
-              projects as a Software Engineer.
-            </Heading>
+              projects.
+            </CardText>
           </Box>
         </MotionDiv>
       </VStack>

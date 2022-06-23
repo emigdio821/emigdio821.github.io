@@ -36,7 +36,7 @@ export default function Bio() {
       <BioSection>
         <BioYear>2014</BioYear>
         <chakra.span>
-          <SemiBoldText>Telematics Engineering</SemiBoldText> Bachelor&prime;s
+          <SemiBoldText>Telematics Engineering</SemiBoldText> Bachelor&apos;s
           Degree, <SemiBoldText>University of Colima</SemiBoldText>.
         </chakra.span>
       </BioSection>
