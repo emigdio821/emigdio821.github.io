@@ -16,6 +16,7 @@ import styles from "assets/css/common.module.css";
 import EmAvatar from "./EmAvatar";
 import MotionDiv from "./MotionDiv";
 import CardText from "./CardText";
+import Spotify from "./Spotify";
 
 export default function HomeTitle() {
   const titleBg = useColorModeValue(bgDark, bgLight);
@@ -37,7 +38,7 @@ export default function HomeTitle() {
             align={{ base: "left", md: "center" }}
             direction={{ base: "column-reverse", md: "row" }}
           >
-            <Box mr={{ base: "inherit", lg: 2 }}>
+            <Box mr={{ base: "inherit", lg: 2 }} w={{ base: "100%", md: "sm" }}>
               <Heading as="h2" size="2xl">
                 Emigdio Torres
                 <span className={styles["text-blinking"]}>_</span>
@@ -48,6 +49,7 @@ export default function HomeTitle() {
               <Button
                 as="a"
                 size="md"
+                mb={4}
                 target="_blank"
                 colorScheme="gray"
                 borderRadius="full"
@@ -58,6 +60,7 @@ export default function HomeTitle() {
               >
                 GitHub
               </Button>
+              <Spotify />
             </Box>
             <EmAvatar />
           </Stack>
