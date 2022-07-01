@@ -27,7 +27,7 @@ export default function HomeTitle() {
       minH="100vh"
       bgImage={titleBg}
       mb={{ base: 4, md: 20 }}
-      bgColor={useColorModeValue("#fafafa", "#141414")}
+      bgColor={useColorModeValue("#ededed", "#141414")}
     >
       <VStack px={4} w="100%" justify="center">
         <MotionDiv y={-10}>

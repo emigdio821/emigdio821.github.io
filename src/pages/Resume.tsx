@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useCallback, useState } from "react";
 import ResumeLeft from "components/ResumeLeft";
 import { useReactToPrint } from "react-to-print";
 import ResumeRight from "components/ResumeRight";
@@ -7,9 +7,21 @@ import { Box, Container, Grid, useColorModeValue } from "@chakra-ui/react";
 
 export default function Resume() {
   const pdfRef = useRef<HTMLDivElement>(null);
+  const [loadingPdf, setLoadingPdf] = useState<boolean>(false);
+
+  const handleOnBeforeGetContent = useCallback(() => {
+    setLoadingPdf(true);
+  }, [setLoadingPdf]);
+
+  const handleAfterPrint = useCallback(() => {
+    setLoadingPdf(false);
+  }, [setLoadingPdf]);
+
   const handlePdfDownload = useReactToPrint({
     content: () => pdfRef.current,
+    onAfterPrint: handleAfterPrint,
     documentTitle: "Emigdio-Torres",
+    onBeforeGetContent: handleOnBeforeGetContent,
   });
 
   return (
@@ -22,7 +34,10 @@ export default function Resume() {
           templateColumns={{ base: "inherit", md: "0.5fr 1fr" }}
           border={`1px solid ${useColorModeValue("#f0efef", "#1c1c1c")}`}
         >
-          <ResumeLeft pdfCallback={handlePdfDownload} />
+          <ResumeLeft
+            isLoadingPdf={loadingPdf}
+            pdfCallback={handlePdfDownload}
+          />
           <ResumeRight />
         </Grid>
       </Box>

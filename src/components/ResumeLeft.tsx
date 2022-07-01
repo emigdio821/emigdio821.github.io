@@ -4,6 +4,7 @@ import {
   Button,
   Heading,
   useColorModeValue,
+  Spinner,
 } from "@chakra-ui/react";
 import {
   FaAt,
@@ -22,10 +23,14 @@ import SemiBoldText from "./SemiBoldText";
 import SectionTitle from "./SectionTitle";
 
 interface ResumeLeftProps {
+  isLoadingPdf: boolean;
   pdfCallback: () => void;
 }
 
-export default function ResumeLeft({ pdfCallback }: ResumeLeftProps) {
+export default function ResumeLeft({
+  pdfCallback,
+  isLoadingPdf,
+}: ResumeLeftProps) {
   return (
     <Box p={4} bg={useColorModeValue("#f0efef", "#1c1c1c")}>
       <Box mb={6}>
@@ -45,13 +50,20 @@ export default function ResumeLeft({ pdfCallback }: ResumeLeftProps) {
           color="#f0efef"
           variant="outline"
           onClick={pdfCallback}
-          leftIcon={<FaFilePdf />}
+          disabled={isLoadingPdf}
+          leftIcon={
+            isLoadingPdf ? (
+              <Spinner size="sm" speed="0.6s" color="#B2ABCC" thickness="4px" />
+            ) : (
+              <FaFilePdf />
+            )
+          }
           className={styles["download-pdf-btn"]}
           bg={useColorModeValue("#333", "inherit")}
           _active={{ bg: useColorModeValue("#333", "inherit") }}
           _hover={{ bg: useColorModeValue("#4C4C4C", "#4C4C4C") }}
         >
-          Download
+          {isLoadingPdf ? "Downloading" : "Download"}
         </Button>
         <Box>
           <Box>
