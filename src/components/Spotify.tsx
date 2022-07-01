@@ -46,7 +46,7 @@ export default function Spotify() {
           <FaSpotify size={20} style={{ height: "24px" }} />
           {song ? (
             <MotionDiv y={5}>
-              <Text fontWeight={600} noOfLines={1}>
+              <Text fontWeight={600} noOfLines={2}>
                 {song.name}
               </Text>
               <Text>{song.artists[0]?.name}</Text>
