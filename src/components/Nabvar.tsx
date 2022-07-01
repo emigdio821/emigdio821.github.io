@@ -17,8 +17,8 @@ export default function Navbar() {
         backdropFilter: "blur(10px)",
       }}
       bg={useColorModeValue(
-        "rgba(255, 255, 255, 0.9)",
-        "rgba(33, 33, 33, 0.9)",
+        "rgba(237, 237, 237, 0.9)",
+        "rgba(20, 20, 20, 0.9)",
       )}
     >
       <Flex

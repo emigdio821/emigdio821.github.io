@@ -7,7 +7,7 @@ const styles = {
   global: (props: StyleFunctionProps | Dict<any>) => ({
     body: {
       color: TextColorModeVal,
-      bg: mode("inherit", "#333")(props),
+      bg: mode("#fafafa", "#333")(props),
     },
   }),
 };

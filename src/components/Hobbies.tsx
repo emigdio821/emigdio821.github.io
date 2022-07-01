@@ -9,7 +9,7 @@ export default function Hobbies() {
         borderRadius="xl"
         p={{ base: 4, md: 10 }}
         mt={{ base: 4, md: 20 }}
-        bg={useColorModeValue("#fafafa", "#2e2e2e")}
+        bg={useColorModeValue("#f5f5f5", "#2e2e2e")}
       >
         <CardText>
           I love music. On my free time I like to play videogames or play drums.

@@ -24,7 +24,7 @@ export default function Skills() {
         borderRadius="xl"
         p={{ base: 4, md: 10 }}
         mb={{ base: 4, md: 20 }}
-        bg={useColorModeValue("#fafafa", "#2e2e2e")}
+        bg={useColorModeValue("#f5f5f5", "#2e2e2e")}
       >
         <Box>
           <CardText>

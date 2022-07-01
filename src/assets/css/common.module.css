@@ -25,12 +25,11 @@
 
   30%,
   100% {
-    transform: rotate(0)
+    transform: rotate(0);
   }
 }
 
 @media print {
-
   html,
   body {
     margin: 0 !important;

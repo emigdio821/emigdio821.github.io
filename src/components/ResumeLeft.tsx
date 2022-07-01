@@ -27,7 +27,7 @@ interface ResumeLeftProps {
 
 export default function ResumeLeft({ pdfCallback }: ResumeLeftProps) {
   return (
-    <Box p={4} bg={useColorModeValue("#f0efef", "#181616")}>
+    <Box p={4} bg={useColorModeValue("#f0efef", "#1c1c1c")}>
       <Box mb={6}>
         <MotionDiv y={-10}>
           <EmAvatar width={120} height={120} />
@@ -42,10 +42,14 @@ export default function ResumeLeft({ pdfCallback }: ResumeLeftProps) {
         </Box>
         <Button
           mb={6}
+          color="#f0efef"
           variant="outline"
           onClick={pdfCallback}
           leftIcon={<FaFilePdf />}
           className={styles["download-pdf-btn"]}
+          bg={useColorModeValue("#333", "inherit")}
+          _active={{ bg: useColorModeValue("#333", "inherit") }}
+          _hover={{ bg: useColorModeValue("#4C4C4C", "#4C4C4C") }}
         >
           Download
         </Button>
