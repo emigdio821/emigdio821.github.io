@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
 import { mode, StyleFunctionProps } from "@chakra-ui/theme-tools";
 import { Dict } from "@chakra-ui/utils";
 import TextColorModeVal from "utils/TextColorModeVal";
@@ -16,7 +16,7 @@ const shadows = {
   outline: "0 0 0 3px #B2ABCC",
 };
 
-const config = {
+const config: ThemeConfig = {
   initialColorMode: "dark",
   useSystemColorMode: true,
 };

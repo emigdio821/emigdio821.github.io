@@ -1,3 +1,4 @@
+import useTitle from "hooks/useTitle";
 import { useRef, useState } from "react";
 import ResumeLeft from "components/ResumeLeft";
 import { useReactToPrint } from "react-to-print";
@@ -5,7 +6,12 @@ import ResumeRight from "components/ResumeRight";
 import styles from "assets/css/common.module.css";
 import { Box, Container, Grid, useColorModeValue } from "@chakra-ui/react";
 
-export default function Resume() {
+interface ResumeProps {
+  title: string;
+}
+
+export default function Resume({ title }: ResumeProps) {
+  useTitle(title);
   const pdfRef = useRef<HTMLDivElement>(null);
   const [loadingPdf, setLoadingPdf] = useState<boolean>(false);
 

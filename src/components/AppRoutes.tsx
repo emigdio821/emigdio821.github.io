@@ -6,8 +6,12 @@ export default function AppdRoutes() {
   useRouteScrollTop();
   return (
     <Routes>
-      {routes.map(({ Component, path }) => (
-        <Route key={`${path}-route`} path={path} element={<Component />} />
+      {routes.map(({ Component, path, name }) => (
+        <Route
+          path={path}
+          key={`${path}-route`}
+          element={<Component title={name} />}
+        />
       ))}
       <Route path="/*" element={<Navigate to={routes[0].to} replace />} />
     </Routes>

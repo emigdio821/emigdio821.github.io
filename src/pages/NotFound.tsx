@@ -8,10 +8,17 @@ import {
   Heading,
   useColorModeValue,
 } from "@chakra-ui/react";
+import useTitle from "hooks/useTitle";
 import { NavLink } from "react-router-dom";
 import { BiGhost, BiArrowBack } from "react-icons/bi";
 
-export default function NotFound() {
+interface NotFoundProps {
+  title: string;
+}
+
+export default function NotFound({ title }: NotFoundProps) {
+  useTitle(title);
+
   return (
     <Flex
       pt={{ base: 10, sm: 20 }}
