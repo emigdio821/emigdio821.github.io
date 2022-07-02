@@ -1,4 +1,4 @@
-import { useRef, useCallback, useState } from "react";
+import { useRef, useState } from "react";
 import ResumeLeft from "components/ResumeLeft";
 import { useReactToPrint } from "react-to-print";
 import ResumeRight from "components/ResumeRight";
@@ -9,19 +9,19 @@ export default function Resume() {
   const pdfRef = useRef<HTMLDivElement>(null);
   const [loadingPdf, setLoadingPdf] = useState<boolean>(false);
 
-  const handleOnBeforeGetContent = useCallback(() => {
-    setLoadingPdf(true);
-  }, [setLoadingPdf]);
-
-  const handleAfterPrint = useCallback(() => {
-    setLoadingPdf(false);
-  }, [setLoadingPdf]);
+  const handleBeforeAfterPrint = () =>
+    new Promise<void>((resolve) => {
+      setLoadingPdf((prev) => {
+        resolve();
+        return !prev;
+      });
+    });
 
   const handlePdfDownload = useReactToPrint({
     content: () => pdfRef.current,
-    onAfterPrint: handleAfterPrint,
     documentTitle: "Emigdio-Torres",
-    onBeforeGetContent: handleOnBeforeGetContent,
+    onAfterPrint: handleBeforeAfterPrint,
+    onBeforeGetContent: handleBeforeAfterPrint,
   });
 
   return (
