@@ -8,7 +8,7 @@ import {
   IconButton,
   ButtonGroup,
 } from "@chakra-ui/react";
-import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BiCoffee } from "react-icons/bi";
 
 export default function Footer() {
@@ -54,7 +54,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/emigdio821/"
           />
-          <IconButton
+          {/* <IconButton
             as="a"
             size="sm"
             target="_blank"
@@ -62,7 +62,7 @@ export default function Footer() {
             icon={<FaTwitter />}
             rel="noopener noreferrer"
             href="https://twitter.com/emigdio821"
-          />
+          /> */}
         </ButtonGroup>
       </Stack>
     </Container>

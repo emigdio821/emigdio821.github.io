@@ -3,17 +3,17 @@ import Navbar from "components/Nabvar";
 import Footer from "components/Footer";
 import AppdRoutes from "components/AppRoutes";
 import { BrowserRouter } from "react-router-dom";
-import { Box, ChakraProvider } from "@chakra-ui/react";
+import { Flex, ChakraProvider } from "@chakra-ui/react";
 
 export default function App() {
   return (
     <BrowserRouter>
       <ChakraProvider theme={theme}>
-        <Navbar />
-        <Box minH={{ base: "calc(100vh - 222px)", sm: "calc(100vh - 150px)" }}>
+        <Flex h="100vh" direction="column" justify="space-between">
+          <Navbar />
           <AppdRoutes />
-        </Box>
-        <Footer />
+          <Footer />
+        </Flex>
       </ChakraProvider>
     </BrowserRouter>
   );
