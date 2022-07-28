@@ -56,8 +56,8 @@ export default function ResumeRight() {
               <SemiBoldText>TATA Consultancy Services</SemiBoldText>
             </Text>
             <Text fontSize="sm">
-              Frontend work, using JavaScript under a framework called: ExtJS.
-              Development of banking web apps for Morgan Stanley bank.
+              Frontend side, using JavaScript under a framework called: ExtJS.
+              Development of banking web apps for Morgan Stanley.
             </Text>
           </Box>
         </Flex>
@@ -87,9 +87,9 @@ export default function ResumeRight() {
               <SemiBoldText>Advanced Methods Co. (Amco)</SemiBoldText>
             </Text>
             <Text fontSize="sm">
-              Frontend work, using SASS, JQuery, Bootstrap. Sometimes worked on
-              Backend, using Ruby on Rails. Development of Payments portal for
-              an education platform.
+              Frontend side, using SASS, JQuery, Bootstrap. Sometimes Backend
+              side, using Ruby on Rails. Development of Payments portal for an
+              education platform.
             </Text>
           </Box>
         </Flex>
@@ -118,8 +118,8 @@ export default function ResumeRight() {
               2019- 2021 | <SemiBoldText>HCL Technologies</SemiBoldText>
             </Text>
             <Text fontSize="sm">
-              Frontend work, using IBM JS Dojo toolkit, migrating to ReactJS,
-              Redux and MaterialUI. Development of an application builder.
+              Frontend side, using IBM Dojo toolkit, migrating to React, Redux
+              and MaterialUI. Development of an application builder.
             </Text>
           </Box>
         </Flex>
@@ -140,7 +140,10 @@ export default function ResumeRight() {
             <Text fontSize="sm">
               Present | <SemiBoldText>Wizeline</SemiBoldText>
             </Text>
-            <Text fontSize="sm">Currently working with React.</Text>
+            <Text fontSize="sm">
+              Currently working on Frontend, using React and AWS. Development
+              and support for the Dow Jones login page products.
+            </Text>
           </Box>
         </Flex>
       </Box>
